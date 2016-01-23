@@ -11,7 +11,7 @@ export default {
     // That's how we are doing latency compensation
     Meteor.call('documents.create', id, name, summary, (err) => {
       if (err) {
-        return LocalState.set('SAVING_ERROR', err.message);
+        return LocalState.set('SAVING_ERROR', err.reason);
       }
     });
     FlowRouter.go(`/document/${id}`);

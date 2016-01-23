@@ -36,6 +36,7 @@ ejson@1.0.8-modules.4
 email@1.0.9-modules.4
 es5-shim@4.3.2-modules.4
 fastclick@1.0.8-modules.4
+flemay:less-autoprefixer@1.2.0
 geojson-utils@1.0.5-modules.4
 hot-code-push@1.0.1-modules.4
 html-tools@1.0.6-modules.4
@@ -78,6 +79,8 @@ reactive-var@1.0.6
 reload@1.1.5-modules.4
 retry@1.0.4
 routepolicy@1.0.7-modules.4
+semantic:ui@2.1.7
+semantic:ui-data@2.1.7
 service-configuration@1.0.6-modules.4
 session@1.1.2-modules.4
 sha@1.0.4
@@ -87,6 +90,7 @@ srp@1.0.5-modules.4
 standard-minifiers@1.0.3-modules.4
 standard-minifiers-css@1.0.3-modules.4
 standard-minifiers-js@1.0.3-modules.4
+stylus@2.511.2-modules.4
 templating@1.1.6-modules.4
 templating-tools@1.0.1-modules.4
 tracker@1.0.10-modules.4

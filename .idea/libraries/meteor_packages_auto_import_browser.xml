@@ -155,6 +155,8 @@
         <item url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.8-modules.4/web.browser/pre.js" />
         <item url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.8-modules.4/web.browser/post.js" />
         <item url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.8-modules.4/web.browser/fastclick.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/stylus/2.511.2-modules.4/web.browser/plugin/compile-stylus.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/stylus/2.511.2-modules.4/web.browser/stylus_tests.js" />
         <item url="file://$USER_HOME$/.meteor/packages/geojson-utils/1.0.5-modules.4/web.browser/geojson-utils.js" />
         <item url="file://$USER_HOME$/.meteor/packages/geojson-utils/1.0.5-modules.4/web.browser/geojson-utils.tests.js" />
         <item url="file://$USER_HOME$/.meteor/packages/geojson-utils/1.0.5-modules.4/web.browser/main.js" />
@@ -433,6 +435,8 @@
       <root url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.8-modules.4/web.browser/pre.js" />
       <root url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.8-modules.4/web.browser/post.js" />
       <root url="file://$USER_HOME$/.meteor/packages/fastclick/1.0.8-modules.4/web.browser/fastclick.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/stylus/2.511.2-modules.4/web.browser/plugin/compile-stylus.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/stylus/2.511.2-modules.4/web.browser/stylus_tests.js" />
       <root url="file://$USER_HOME$/.meteor/packages/geojson-utils/1.0.5-modules.4/web.browser/geojson-utils.js" />
       <root url="file://$USER_HOME$/.meteor/packages/geojson-utils/1.0.5-modules.4/web.browser/geojson-utils.tests.js" />
       <root url="file://$USER_HOME$/.meteor/packages/geojson-utils/1.0.5-modules.4/web.browser/main.js" />

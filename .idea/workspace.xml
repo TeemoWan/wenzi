@@ -1,53 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2004905e-d671-4627-85c8-48a40e98b423" name="Default" comment="初始化项目,使用meteor1.3">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/jenny.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.babelrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/wenzi.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.meteor/.finished-upgraders" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.meteor/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.meteor/.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.meteor/packages" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.meteor/platforms" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.meteor/release" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.meteor/versions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/actions/documents.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/actions/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/configs/context.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/configs/method_stubs/documents.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/configs/method_stubs/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/configs/routes.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/containers/Home.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/layouts/AuthLayout.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/layouts/MainLayout.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/layouts/NotFound.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/main.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/collections/branch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/collections/commit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/collections/document.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/collections/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/collections/node.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/collections/team.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/collections/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/collections/validationMessage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/main.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/methods/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/publications/.keep" />
+    <list default="true" id="2004905e-d671-4627-85c8-48a40e98b423" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/AuthLayout/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/Footer/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/ForgotPassword/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/ForgotPassword/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/Header/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/Login/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/Login/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/MainLayout/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/Register/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/Register/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/Search/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/containers/forgotPassword.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/containers/header.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/containers/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/containers/register.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/.custom.semantic.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/custom.semantic.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/behaviors/api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/behaviors/colorize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/behaviors/form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/behaviors/state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/behaviors/visibility.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/behaviors/visit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/collections/form.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/collections/grid.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/collections/menu.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/collections/message.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/collections/table.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/button.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/container.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/divider.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/flag.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/header.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/icon.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/image.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/input.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/label.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/list.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/loader.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/rail.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/reveal.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/segment.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/elements/step.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/globals/reset.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/globals/site.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/globals/site.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/accordion.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/accordion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/checkbox.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/checkbox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/dimmer.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/dimmer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/dropdown.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/embed.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/embed.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/modal.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/nag.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/nag.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/popup.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/popup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/progress.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/progress.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/rating.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/rating.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/search.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/search.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/shape.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/shape.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/sidebar.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/sidebar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/sticky.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/sticky.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/tab.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/transition.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/modules/transition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/views/ad.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/views/card.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/views/comment.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/views/feed.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/views/item.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/definitions/views/statistic.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/semantic.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/collections/form.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/collections/form.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/collections/grid.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/collections/grid.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/collections/menu.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/collections/menu.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/collections/message.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/collections/message.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/collections/table.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/collections/table.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/button.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/button.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/container.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/container.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/divider.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/divider.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/flag.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/flag.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/header.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/header.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/icon.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/icon.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/image.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/image.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/input.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/input.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/label.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/label.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/list.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/list.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/loader.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/loader.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/rail.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/rail.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/reveal.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/reveal.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/segment.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/segment.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/step.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/elements/step.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/globals/reset.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/globals/reset.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/globals/site.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/globals/site.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/accordion.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/accordion.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/checkbox.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/checkbox.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/dimmer.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/dimmer.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/dropdown.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/dropdown.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/embed.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/embed.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/modal.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/modal.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/nag.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/nag.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/popup.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/popup.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/progress.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/progress.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/rating.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/rating.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/search.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/search.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/shape.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/shape.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/sidebar.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/sidebar.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/sticky.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/sticky.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/tab.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/tab.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/transition.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/modules/transition.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/ad.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/ad.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/card.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/card.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/comment.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/comment.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/feed.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/feed.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/item.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/item.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/statistic.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/site/views/statistic.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/theme.config.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/theme.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/collections/form.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/collections/form.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/collections/grid.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/collections/grid.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/collections/menu.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/collections/menu.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/collections/message.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/collections/message.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/collections/table.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/collections/table.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/button.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/button.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/container.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/container.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/divider.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/divider.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/flag.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/flag.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/header.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/header.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/icon.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/icon.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/image.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/image.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/input.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/input.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/label.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/label.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/list.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/list.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/loader.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/loader.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/rail.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/rail.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/reveal.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/reveal.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/segment.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/segment.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/step.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/elements/step.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/globals/reset.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/globals/reset.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/globals/site.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/globals/site.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/accordion.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/accordion.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/checkbox.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/checkbox.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/dimmer.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/dimmer.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/dropdown.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/dropdown.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/embed.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/embed.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/modal.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/modal.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/nag.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/nag.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/popup.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/popup.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/progress.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/progress.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/rating.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/rating.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/search.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/search.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/shape.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/shape.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/sidebar.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/sidebar.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/sticky.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/sticky.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/tab.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/tab.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/transition.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/modules/transition.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/ad.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/ad.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/card.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/card.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/comment.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/comment.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/feed.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/feed.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/item.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/item.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/statistic.overrides.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/lib/semantic-ui/themes/default/views/statistic.variables.import.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/methods/auth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/publications/auth.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/layouts/AuthLayout.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/layouts/MainLayout.jsx" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/components/.keep" afterPath="$PROJECT_DIR$/client/components/MainLayout/style.styl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/containers/Home.jsx" afterPath="$PROJECT_DIR$/client/components/Home/index.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/layouts/NotFound.jsx" afterPath="$PROJECT_DIR$/client/components/NotFound/index.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server/main.jsx" afterPath="$PROJECT_DIR$/client/actions/register.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server/methods/.keep" afterPath="$PROJECT_DIR$/client/actions/login.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server/publications/.keep" afterPath="$PROJECT_DIR$/client/actions/forgotPassword.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/wenzi.iml" afterPath="$PROJECT_DIR$/.idea/wenzi.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/actions/documents.js" afterPath="$PROJECT_DIR$/client/actions/documents.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/actions/index.js" afterPath="$PROJECT_DIR$/client/actions/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/configs/routes.jsx" afterPath="$PROJECT_DIR$/client/configs/routes.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="wenzi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,72 +308,65 @@
     <favorites_list name="wenzi" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Home.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/containers/Home.jsx">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="forgotPassword.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/actions/forgotPassword.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="3" column="49" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainLayout.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/layouts/MainLayout.jsx">
+      <file leaf-file-name="forgotPassword.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/containers/forgotPassword.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+              <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotFound.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/layouts/NotFound.jsx">
+      <file leaf-file-name="header.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/containers/header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1609756">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/configs/routes.jsx">
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/Header/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="context.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/configs/context.js">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.08099352">
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="documents.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/configs/method_stubs/documents.js">
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/MainLayout/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/actions/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,27 +376,37 @@
         <entry file="file://$PROJECT_DIR$/client/actions/documents.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/main.jsx">
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/containers/register.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/containers/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/actions/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -173,6 +417,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -183,43 +428,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/server/server.js" />
-        <option value="$PROJECT_DIR$/lib/app/routes/index.js" />
-        <option value="$PROJECT_DIR$/lib/app/components/compoents/LoginForm.js" />
-        <option value="$PROJECT_DIR$/lib/app/components/compoents/RegisterForm.js" />
-        <option value="$PROJECT_DIR$/lib/app/routes/index.jsx" />
-        <option value="$PROJECT_DIR$/client/client.js" />
-        <option value="$PROJECT_DIR$/lib/app/components/layouts/CoreLayout.jsx.js" />
-        <option value="$PROJECT_DIR$/lib/app/components/layouts/CoreLayout.jsx" />
-        <option value="$PROJECT_DIR$/lib/app/components/containers/Home.jsx" />
-        <option value="$PROJECT_DIR$/server/publications/user.js" />
-        <option value="$PROJECT_DIR$/server/publications/team.js" />
-        <option value="$PROJECT_DIR$/server/publications/document.js" />
-        <option value="$PROJECT_DIR$/server/methods/team.js" />
-        <option value="$PROJECT_DIR$/server/methods/document.js" />
-        <option value="$PROJECT_DIR$/server/server.jsx" />
-        <option value="$PROJECT_DIR$/client/routes/index.jsx" />
-        <option value="$PROJECT_DIR$/client/routes.jsx" />
-        <option value="$PROJECT_DIR$/client/layouts/NotFound.jsx" />
-        <option value="$PROJECT_DIR$/client/layouts/CoreLayout.jsx" />
-        <option value="$PROJECT_DIR$/client/client.jsx" />
-        <option value="$PROJECT_DIR$/client/routes/routes.jsx" />
-        <option value="$PROJECT_DIR$/client/configs/context.js" />
-        <option value="$PROJECT_DIR$/client/configs/context.jsx" />
-        <option value="$PROJECT_DIR$/client/actions/auth.js" />
-        <option value="$PROJECT_DIR$/client/configs/method_stubs/post.js" />
         <option value="$PROJECT_DIR$/client/configs/method_stubs/posts.js" />
         <option value="$PROJECT_DIR$/client/configs/method_stubs/documents.js" />
         <option value="$PROJECT_DIR$/client/configs/method_stubs/index.js" />
         <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/.babelrc" />
+        <option value="$PROJECT_DIR$/client/main.jsx" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/client/containers/Login.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/Register.jsx" />
         <option value="$PROJECT_DIR$/client/layouts/AuthLayout.jsx" />
         <option value="$PROJECT_DIR$/client/layouts/MainLayout.jsx" />
-        <option value="$PROJECT_DIR$/client/actions/documents.js" />
-        <option value="$PROJECT_DIR$/client/actions/index.js" />
-        <option value="$PROJECT_DIR$/client/main.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/client/containers/Footer.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/Header.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/Search.jsx" />
+        <option value="$PROJECT_DIR$/client/components/Search.jsx" />
+        <option value="$PROJECT_DIR$/client/components/Header.jsx" />
+        <option value="$PROJECT_DIR$/client/components/Footer.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/MainLayout.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/ForgotPassword.jsx" />
+        <option value="$PROJECT_DIR$/client/components/ForgotPassword.jsx" />
+        <option value="$PROJECT_DIR$/client/components/MainLayout/style.css" />
+        <option value="$PROJECT_DIR$/client/styles/main.styl" />
+        <option value="$PROJECT_DIR$/client/styles/app.main.styl" />
+        <option value="$PROJECT_DIR$/client/lib/semantic-ui/custom.semantic.json" />
+        <option value="$PROJECT_DIR$/client/components/MainLayout/style.styl" />
+        <option value="$PROJECT_DIR$/server/main.js" />
+        <option value="$PROJECT_DIR$/client/components/Register/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/ForgotPassword/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/Login/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/AuthLayout/index.jsx" />
+        <option value="$PROJECT_DIR$/server/methods/auth.js" />
+        <option value="$PROJECT_DIR$/server/publications/auth.js" />
+        <option value="$PROJECT_DIR$/client/actions/auth.js" />
+        <option value="$PROJECT_DIR$/client/components/Footer/index.jsx" />
+        <option value="$PROJECT_DIR$/client/configs/routes.jsx" />
+        <option value="$PROJECT_DIR$/client/actions/index.js" />
+        <option value="$PROJECT_DIR$/client/actions/forgotPassword.js" />
+        <option value="$PROJECT_DIR$/client/components/ForgotPassword/index.jsx" />
+        <option value="$PROJECT_DIR$/client/components/Login/index.jsx" />
+        <option value="$PROJECT_DIR$/client/components/Register/index.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/register.js" />
+        <option value="$PROJECT_DIR$/client/actions/register.js" />
+        <option value="$PROJECT_DIR$/client/actions/login.js" />
+        <option value="$PROJECT_DIR$/client/actions/documents.js" />
+        <option value="$PROJECT_DIR$/client/containers/login.js" />
+        <option value="$PROJECT_DIR$/client/containers/forgotPassword.js" />
+        <option value="$PROJECT_DIR$/client/containers/header.js" />
+        <option value="$PROJECT_DIR$/client/components/MainLayout/index.jsx" />
+        <option value="$PROJECT_DIR$/client/components/Header/index.jsx" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -233,7 +492,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1320" />
+    <option name="width" value="1362" />
     <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -345,11 +604,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="collections" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,24 +637,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wenzi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wenzi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -435,11 +690,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="configs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="method_stubs" />
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,6 +709,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MainLayout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Header" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ForgotPassword" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -484,7 +783,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../react_meteor/wenzi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../react_meteor/wenzi-webpack" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="enabled" />
     <property name="js.meteor.project" value="true" />
@@ -494,22 +793,23 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/libs" />
-      <recent name="$PROJECT_DIR$/client/routes" />
-      <recent name="$PROJECT_DIR$/client" />
-      <recent name="$PROJECT_DIR$/lib/components" />
-      <recent name="$PROJECT_DIR$/lib" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/layouts" />
       <recent name="$PROJECT_DIR$/server/publications" />
       <recent name="$PROJECT_DIR$/server/methods" />
-      <recent name="$PROJECT_DIR$/lib/app/components/containers" />
-      <recent name="$PROJECT_DIR$/lib/app/components/layouts" />
+      <recent name="$PROJECT_DIR$/client/components/ForgotPassword" />
+      <recent name="$PROJECT_DIR$/client/components/Login" />
+      <recent name="$PROJECT_DIR$/client/containers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client" />
+      <recent name="$PROJECT_DIR$/client/lib" />
+      <recent name="$PROJECT_DIR$/client/components/Search" />
+      <recent name="$PROJECT_DIR$/client/components/Register" />
+      <recent name="$PROJECT_DIR$/client/components/NotFound" />
     </key>
   </component>
   <component name="RunManager">
@@ -524,6 +824,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -546,6 +851,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2004905e-d671-4627-85c8-48a40e98b423" name="Default" comment="" />
@@ -553,32 +861,52 @@
       <option name="number" value="Default" />
       <updated>1453427236663</updated>
     </task>
+    <task id="LOCAL-00001" summary="初始化项目,使用meteor1.3">
+      <created>1453462494603</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1453462494603</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1320" height="1440" extended-state="6" />
+    <frame x="0" y="0" width="1362" height="1440" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29792148" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25577927" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39136904" sideWeight="0.1575179" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39136904" sideWeight="0.1575179" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19866072" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21651785" sideWeight="0.8424821" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26968795" sideWeight="0.8424821" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化项目,使用meteor1.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化项目,使用meteor1.3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -604,192 +932,7 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.meteor/packages/reactive-dict/1.1.3/web.browser/reactive-dict.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.meteor/packages/blaze/2.1.3/web.browser/attrs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.meteor/packages/autoupdate/1.2.4/web.browser/autoupdate_client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.2.6/web.browser/.npm/package/node_modules/meteor-ecmascript-runtime/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.meteor/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.22727273">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/.keep">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/main.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/methods/.keep">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/publications/.keep">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.meteor/packages/mongo-id/1.0.1/web.browser/id.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.333333">
-          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.meteor/packages/meteorhacks_fast-render/2.11.0/web.browser/lib/client/id_tools.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.2-modules.4/web.browser/id_map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.meteor/packages/id-map/1.0.4/web.browser/id-map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3804878">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/node.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/team.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/branch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/commit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/document.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/validationMessage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/index.js">
+    <entry file="file://$PROJECT_DIR$/client/main.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -797,42 +940,238 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc">
+    <entry file="file://$PROJECT_DIR$/libs/collections/commit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92507493">
-          <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/.custom.semantic.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/NotFound/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19879518">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
+    <entry file="file://$PROJECT_DIR$/client/components/Search/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.30722892">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/layouts/AuthLayout.jsx">
+    <entry file="file://$PROJECT_DIR$/client/components/Home/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.21686748">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/configs/method_stubs/index.js">
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/definitions/globals/site.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/definitions/globals/site.import.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="77.041664">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/definitions/globals/reset.import.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6327543">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/theme.config.import.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/site/collections/grid.overrides.import.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/site/elements/button.overrides.import.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/site/elements/container.variables.import.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/site/globals/site.overrides.import.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/custom.semantic.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.2916667">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/theme.import.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="10.791667">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/semantic.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/lib/semantic-ui/site/collections/form.overrides.import.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/MainLayout/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Login/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.meteor/packages/aldeed_simple-schema/1.5.3/web.browser/simple-schema-validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.meteor/packages/aldeed_simple-schema/1.5.3/web.browser/simple-schema-utility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.meteor/packages/aldeed_simple-schema/1.5.3/web.browser/simple-schema-context.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.meteor/packages/aldeed_simple-schema/1.5.3/web.browser/simple-schema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/collections/branch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/publications/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/methods/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/ForgotPassword/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Footer/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/configs/method_stubs/documents.js">
+    <entry file="file://$PROJECT_DIR$/client/components/AuthLayout/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Register/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -845,30 +1184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/configs/routes.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/actions/documents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/main.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -877,34 +1192,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/containers/Home.jsx">
+    <entry file="file://$PROJECT_DIR$/client/configs/routes.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/layouts/MainLayout.jsx">
+    <entry file="file://$PROJECT_DIR$/client/components/Login/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="44" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/layouts/NotFound.jsx">
+    <entry file="file://$PROJECT_DIR$/client/components/Register/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1609756">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/actions/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/actions/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/actions/documents.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/actions/forgotPassword.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/containers/forgotPassword.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/containers/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/containers/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/containers/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/MainLayout/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/ForgotPassword/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.015706806">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Header/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08099352">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
           <folding />
         </state>
       </provider>
