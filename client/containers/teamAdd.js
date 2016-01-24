@@ -1,24 +1,23 @@
 import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
-import Login from '../components/Login/index.jsx';
+import TeamAdd from '../components/TeamAdd/index.jsx';
 
-export const composer = ({LocalState, clearLogin}, onData) => {
-  const error = LocalState.get('LOGIN_ERROR');
-  const processing = LocalState.get('LOGIN_PROCESSING');
+export const composer = ({LocalState, clearTeamAdd}, onData) => {
+  const error = LocalState.get('TEAM_ADD_ERROR');
+  const processing = LocalState.get('TEAM_ADD_PROCESSING');
   onData(null, {error, processing});
 
   // clear state when unmounting the component
-  return clearLogin;
+  return clearTeamAdd;
 };
 
 export const depsMapper = (context, actions) => ({
-  FlowRouter: context.FlowRouter,
   LocalState: context.LocalState,
-  login: actions.auth.login,
-  clearLogin: actions.auth.clearLogin
+  teamAdd: actions.teams.teamAdd,
+  clearTeamAdd: actions.teams.clearTeamAdd
 });
 
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(Login);
+)(TeamAdd);

@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 
-var ForgotPassword = React.createClass({
+const ForgotPassword = React.createClass({
   render() {
     const {FlowRouter, error} = this.props;
 
@@ -11,7 +10,7 @@ var ForgotPassword = React.createClass({
         <div className='ui middle aligned center aligned grid'>
           <div className='column'>
             <h2 className='ui teal image header'>
-              <img src='/images/logo.png' className='image' />
+              <img src='/images/logo.png' className='image'/>
               <div className='content'>
                 找回密码
               </div>
@@ -21,7 +20,7 @@ var ForgotPassword = React.createClass({
                 <div className='field'>
                   <div className='ui left icon input'>
                     <i className='mail icon'/>
-                    <input type='text' name='email' placeholder='邮箱' onKeyDown={this.handleEmailEnterKeyDown} />
+                    <input type='text' name='email' placeholder='邮箱' onKeyDown={this.handleEmailEnterKeyDown}/>
                   </div>
                 </div>
                 <div className='ui fluid large teal submit button' onClick={this.handleSubmit}>找回密码</div>
@@ -39,7 +38,7 @@ var ForgotPassword = React.createClass({
   },
 
   handleEmailEnterKeyDown(event) {
-    if(event.keyCode === 13) {
+    if (event.keyCode === 13) {
       this.handleSubmit();
     }
   },

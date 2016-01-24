@@ -25,7 +25,7 @@ const TeemSchema = new SimpleSchema({
   }
 });
 
-export const Teams = new Mongo.Collection('teams');
+let Teams = new Mongo.Collection('teams');
 Teams.attachSchema(TeemSchema);
 
 Teams.allow({
@@ -39,3 +39,5 @@ Teams.allow({
     return false;
   }
 });
+
+export default Teams;

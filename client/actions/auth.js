@@ -1,6 +1,30 @@
 import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
 export default {
+  login({Meteor, LocalState, FlowRouter}, email, password) {
+    if (email === '' || password === '') {
+      return LocalState.set('LOGIN_ERROR', '邮箱地址及密码必须填写');
+    }
+
+    LocalState.set('LOGIN_ERROR', null);
+    LocalState.set('LOGIN_PROCESSING', true);
+
+    Meteor.loginWithPassword(email, password, (err, res) => {
+      if (err) {
+        LocalState.set('LOGIN_PROCESSING', false);
+        LocalState.set('LOGIN_ERROR', err.reason);
+      } else {
+        LocalState.set('LOGIN_PROCESSING', false);
+        FlowRouter.go('/');
+      }
+    });
+  },
+
+  clearLogin({LocalState}) {
+    LocalState.set('LOGIN_ERROR', null);
+    LocalState.set('LOGIN_PROCESSING', false);
+  },
+
   register({Meteor, LocalState, FlowRouter}, email, username, password) {
     let emailRegExp = SimpleSchema.RegEx.Email;
     let usernameRegExp = new RegExp(/^[a-zA-Z0-9_\u4e00-\u9fa5]{2,16}$/);
@@ -31,19 +55,19 @@ export default {
     }
 
     LocalState.set('REGISTER_ERROR', null);
-    LocalState.set('REGISTER_REGISTERING', true);
+    LocalState.set('REGISTER_PROCESSING', true);
 
     Meteor.call('register', email, username, password, (err, res) => {
       if (err) {
-        LocalState.set('REGISTER_REGISTERING', false);
+        LocalState.set('REGISTER_PROCESSING', false);
         LocalState.set('REGISTER_ERROR', err.reason);
       } else {
         Meteor.loginWithPassword(email, password, (err, res) => {
           if (err) {
-            LocalState.set('REGISTER_REGISTERING', false);
+            LocalState.set('REGISTER_PROCESSING', false);
             LocalState.set('REGISTER_ERROR', err.reason);
           } else {
-            LocalState.set('REGISTER_REGISTERING', false);
+            LocalState.set('REGISTER_PROCESSING', false);
             FlowRouter.go('/');
           }
         });
@@ -53,6 +77,19 @@ export default {
 
   clearRegiser({LocalState}) {
     LocalState.set('REGISTER_ERROR', null);
-    LocalState.set('REGISTER_REGISTERING', false);
+    LocalState.set('REGISTER_PROCESSING', false);
+  },
+
+  forgotPassword({Meteor, LocalState, FlowRouter}, email) {
+    if (email === '') {
+      return LocalState.set('FORGOTPASSWORD_ERROR', '邮箱地址必须填写');
+    }
+
+
+  },
+
+  clearForgotPassword({LocalState}) {
+    LocalState.set('FORGOTPASSWORD_ERROR', null);
+    LocalState.set('FORGOTPASSWORD_PROCESSING', false);
   }
 };

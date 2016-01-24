@@ -1,11 +1,11 @@
-import login from './login';
-import register from './register';
-import forgotPassword from './forgotPassword';
+import auth from './auth';
+import users from './users';
+import teams from './teams';
 import documents from './documents';
 
 export default {
-  login,
-  register,
-  forgotPassword,
+  auth,
+  users,
+  teams,
   documents
 }

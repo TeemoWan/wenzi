@@ -4,8 +4,8 @@ import Register from '../components/Register/index.jsx';
 
 export const composer = ({LocalState, clearRegiser}, onData) => {
   const error = LocalState.get('REGISTER_ERROR');
-  const registering = LocalState.get('REGISTER_REGISTERING');
-  onData(null, {error, registering});
+  const processing = LocalState.get('REGISTER_PROCESSING');
+  onData(null, {error, processing});
 
   // clear state when unmounting the component
   return clearRegiser;
@@ -14,8 +14,8 @@ export const composer = ({LocalState, clearRegiser}, onData) => {
 export const depsMapper = (context, actions) => ({
   FlowRouter: context.FlowRouter,
   LocalState: context.LocalState,
-  register: actions.register.register,
-  clearRegiser: actions.register.clearRegiser
+  register: actions.auth.register,
+  clearRegiser: actions.auth.clearRegiser
 });
 
 export default composeAll(

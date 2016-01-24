@@ -1,3 +1,5 @@
+import {Meteor} from 'meteor/meteor';
+import {check} from 'meteor/check';
 import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
 Meteor.methods({
@@ -5,6 +7,10 @@ Meteor.methods({
     let emailRegExp = SimpleSchema.RegEx.Email;
     let usernameRegExp = new RegExp(/^[a-zA-Z0-9_\u4e00-\u9fa5]{2,16}$/);
     let passwordRegExp = new RegExp(/^[a-zA-Z0-9~!@#$%^&*()_+]{6,16}$/);
+
+    check(email, String);
+    check(username, String);
+    check(password, String);
 
     if (email === '') {
       throw new Meteor.Error('emailEmpty', '邮箱地址必须填写');

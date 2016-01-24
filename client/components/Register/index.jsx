@@ -1,15 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 
-var Register = React.createClass({
+const Register = React.createClass({
   render() {
-    let {FlowRouter, error, registering} = this.props;
-    let formClass;
-
-    console.dir(this.props);
-
-    formClass = classNames({'ui': true,
+    const {FlowRouter, error, processing} = this.props;
+    const formClass = classNames({
+      'ui': true,
       'large': true,
       'form': true,
       'error': !!error
@@ -32,26 +28,25 @@ var Register = React.createClass({
                   <div className='field'>
                     <div className='ui left icon input'>
                       <i className='mail icon'/>
-                      <input type='text' ref='email' placeholder='邮箱' onKeyDown={this.handleEmailEnterKeyDown} />
+                      <input type='text' ref='email' placeholder='邮箱' onKeyDown={this.handleEmailEnterKeyDown}/>
                     </div>
                   </div>
                   <div className='field'>
                     <div className='ui left icon input'>
                       <i className='user icon'/>
-                      <input type='text' ref='username' placeholder='用户名' onKeyDown={this.handleUsernameEnterKeyDown} />
+                      <input type='text' ref='username' placeholder='用户名' onKeyDown={this.handleUsernameEnterKeyDown}/>
                     </div>
                   </div>
                   <div className='field'>
                     <div className='ui left icon input'>
                       <i className='lock icon'/>
-                      <input type='password' ref='password' placeholder='密码' onKeyDown={this.handlePasswordEnterKeyDown} />
+                      <input type='password' ref='password' placeholder='密码'
+                             onKeyDown={this.handlePasswordEnterKeyDown}/>
                     </div>
                   </div>
-                  {
-                    registering
+                  {processing
                     ? <div className='ui fluid large loading disabled button'></div>
-                    : <div className='ui fluid large teal button' onClick={this.handleSubmit}>注册</div>
-                  }
+                    : <div className='ui fluid large teal button' onClick={this.handleSubmit}>注册</div>}
                 </div>
                 {error ? <div className='ui error message'><p>{error}</p></div> : null}
               </form>
@@ -67,19 +62,19 @@ var Register = React.createClass({
   },
 
   handleEmailEnterKeyDown(event) {
-    if(event.keyCode === 13) {
+    if (event.keyCode === 13) {
       this.refs.username.focus();
     }
   },
 
   handleUsernameEnterKeyDown(event) {
-    if(event.keyCode === 13) {
+    if (event.keyCode === 13) {
       this.refs.password.focus();
     }
   },
 
   handlePasswordEnterKeyDown(event) {
-    if(event.keyCode === 13) {
+    if (event.keyCode === 13) {
       this.handleSubmit();
     }
   },

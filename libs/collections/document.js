@@ -94,7 +94,7 @@ const DocumentSchema = new SimpleSchema({
   }
 });
 
-export const Documents = new Mongo.Collection('documents');
+let Documents = new Mongo.Collection('documents');
 Documents.attachSchema(DocumentSchema);
 
 Documents.allow({
@@ -108,3 +108,5 @@ Documents.allow({
     return false;
   }
 });
+
+export default Documents;

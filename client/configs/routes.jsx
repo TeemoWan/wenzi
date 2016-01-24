@@ -9,6 +9,12 @@ import NotFound from '../components/NotFound/index.jsx';
 import Login from '../containers/login';
 import Register from '../containers/register';
 import ForgotPassword from '../containers/forgotPassword';
+import User from '../containers/user';
+import TeamAdd from '../containers/teamAdd';
+import Team from '../containers/team';
+import DocumentIndex from '../containers/documentIndex';
+import DocumentAdd from '../containers/documentAdd';
+import Document from '../containers/document';
 
 export const initRoutes = (context, actions) => {
   const MainLayoutCtx = injectDeps(context, actions)(MainLayout);
@@ -39,6 +45,48 @@ export const initRoutes = (context, actions) => {
     name: 'forgotPassword',
     action: function () {
       mount(AuthLayoutCtx, {content: () => (<ForgotPassword />)});
+    }
+  });
+
+  FlowRouter.route('/user/:userId', {
+    name: 'user',
+    action: function ({userId}) {
+      mount(MainLayoutCtx, {content: () => (<User userId={userId}/>)});
+    }
+  });
+
+  FlowRouter.route('/team/add', {
+    name: 'teamAdd',
+    action: function () {
+      mount(MainLayoutCtx, {content: () => (<TeamAdd />)});
+    }
+  });
+
+  FlowRouter.route('/team/:teamId', {
+    name: 'team',
+    action: function ({teamId}) {
+      mount(MainLayoutCtx, {content: () => (<Team teamId={teamId}/>)});
+    }
+  });
+
+  FlowRouter.route('/document', {
+    name: 'documentIndex',
+    action: function () {
+      mount(MainLayoutCtx, {content: () => (<DocumentIndex />)});
+    }
+  });
+
+  FlowRouter.route('/document/add', {
+    name: 'documentAdd',
+    action: function () {
+      mount(MainLayoutCtx, {content: () => (<DocumentAdd />)});
+    }
+  });
+
+  FlowRouter.route('/document/:documentId', {
+    name: 'document',
+    action: function ({documentId}) {
+      mount(MainLayoutCtx, {content: () => (<Document documentId={documentId}/>)});
     }
   });
 

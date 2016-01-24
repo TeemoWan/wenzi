@@ -1,9 +1,11 @@
 import React from 'react';
 
-var NotFound = React.createClass({
+const NotFound = React.createClass({
   render() {
     return (
-      <span>404</span>
+      <div className='ui main container' id='content'>
+        404
+      </div>
     )
   }
 });

@@ -70,7 +70,7 @@ const CommitSchema = new SimpleSchema({
   }
 });
 
-export const Commits = new Mongo.Collection('commits');
+let Commits = new Mongo.Collection('commits');
 Commits.attachSchema(CommitSchema);
 
 Commits.allow({
@@ -84,3 +84,5 @@ Commits.allow({
     return false;
   }
 });
+
+export default Commits;

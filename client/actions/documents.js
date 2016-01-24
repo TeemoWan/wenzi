@@ -1,23 +1,25 @@
 export default {
-  create({Meteor, LocalState, FlowRouter}, name, summary) {
-    if (!name || !summary) {
-      return LocalState.set('SAVING_ERROR', 'name & summary are required!');
+  documentAdd({Meteor, LocalState, FlowRouter}, ownerType, ownerId, name, summary) {
+    if (name === '') {
+      return LocalState.set('DOCUMENT_ADD_ERROR', '文档名必须填写');
     }
 
-    LocalState.set('SAVING_ERROR', null);
+    LocalState.set('DOCUMENT_ADD_ERROR', null);
+    LocalState.set('DOCUMENT_ADD_PROCESSING', true);
 
-    const id = Meteor.uuid();
-    // There is a method stub for this in the config/method_stubs
-    // That's how we are doing latency compensation
-    Meteor.call('documents.create', id, name, summary, (err) => {
+    Meteor.call('documentAdd', ownerType, ownerId, name, summary, (err, res) => {
       if (err) {
-        return LocalState.set('SAVING_ERROR', err.reason);
+        LocalState.set('DOCUMENT_ADD_PROCESSING', false);
+        LocalState.set('DOCUMENT_ADD_ERROR', err.reason);
+      } else {
+        LocalState.set('DOCUMENT_ADD_PROCESSING', false);
+        FlowRouter.go(`/document/${res}`);
       }
     });
-    FlowRouter.go(`/document/${id}`);
   },
 
-  clearErrors({LocalState}) {
-    return LocalState.set('SAVING_ERROR', null);
+  clearDocumentAdd({LocalState}) {
+    LocalState.set('DOCUMENT_ADD_ERROR', null);
+    LocalState.set('DOCUMENT_ADD_PROCESSING', false);
   }
 };

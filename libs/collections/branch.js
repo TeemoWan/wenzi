@@ -40,7 +40,7 @@ const BranchSchema = new SimpleSchema({
   }
 });
 
-export const Branches = new Mongo.Collection('branches');
+let Branches = new Mongo.Collection('branches');
 Branches.attachSchema(BranchSchema);
 
 Branches.allow({
@@ -54,3 +54,5 @@ Branches.allow({
     return false;
   }
 });
+
+export default Branches;

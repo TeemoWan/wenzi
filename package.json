@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	"lint": "eslint ./libs ./client ./server --ext .js --ext .jsx",
+    "lint": "eslint ./libs ./client ./server --ext .js --ext .jsx"
   },
   "keywords": [],
   "author": "",

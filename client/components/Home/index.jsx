@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Home = React.createClass({
+const Home = React.createClass({
   render() {
     return (
       <div className='ui main container' id='content'>

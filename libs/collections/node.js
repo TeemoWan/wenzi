@@ -44,7 +44,7 @@ const NodeSchema = new SimpleSchema({
   }
 });
 
-export const Nodes = new Mongo.Collection('nodes');
+let Nodes = new Mongo.Collection('nodes');
 Nodes.attachSchema(NodeSchema);
 
 Nodes.allow({
@@ -58,3 +58,5 @@ Nodes.allow({
     return false;
   }
 });
+
+export default Nodes;

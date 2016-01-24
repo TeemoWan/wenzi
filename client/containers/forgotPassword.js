@@ -13,8 +13,8 @@ export const composer = ({LocalState, clearForgotPassword}, onData) => {
 export const depsMapper = (context, actions) => ({
   FlowRouter: context.FlowRouter,
   LocalState: context.LocalState,
-  forgotPassword: actions.forgotPassword.forgotPassword,
-  clearForgotPassword: actions.forgotPassword.clearForgotPassword
+  forgotPassword: actions.auth.forgotPassword,
+  clearForgotPassword: actions.auth.clearForgotPassword
 });
 
 export default composeAll(
