@@ -1,6 +1,7 @@
 import React from 'react';
 import {injectDeps} from 'react-simple-di';
 import {mount} from 'react-mounter';
+import {Meteor} from 'meteor/meteor';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import MainLayout from '../components/MainLayout/index.jsx';
 import AuthLayout from '../components/AuthLayout/index.jsx';
@@ -16,6 +17,18 @@ import DocumentIndex from '../containers/documentIndex';
 import DocumentAdd from '../containers/documentAdd';
 import Document from '../containers/document';
 
+const checkLoggedIn = () => {
+  if (!Meteor.loggingIn() && !Meteor.userId()) {
+    FlowRouter.go('/login');
+  }
+};
+
+const redirectIfLoggedIn = (ctx, redirect) => {
+  if (Meteor.userId()) {
+    redirect('/');
+  }
+};
+
 export const initRoutes = (context, actions) => {
   const MainLayoutCtx = injectDeps(context, actions)(MainLayout);
   const AuthLayoutCtx = injectDeps(context, actions)(AuthLayout);
@@ -29,6 +42,7 @@ export const initRoutes = (context, actions) => {
 
   FlowRouter.route('/login', {
     name: 'login',
+    triggersEnter: [redirectIfLoggedIn],
     action: function () {
       mount(AuthLayoutCtx, {content: () => (<Login />)});
     }
@@ -36,6 +50,7 @@ export const initRoutes = (context, actions) => {
 
   FlowRouter.route('/register', {
     name: 'register',
+    triggersEnter: [redirectIfLoggedIn],
     action: function () {
       mount(AuthLayoutCtx, {content: () => (<Register />)});
     }
@@ -43,6 +58,7 @@ export const initRoutes = (context, actions) => {
 
   FlowRouter.route('/forgotPassword', {
     name: 'forgotPassword',
+    triggersEnter: [redirectIfLoggedIn],
     action: function () {
       mount(AuthLayoutCtx, {content: () => (<ForgotPassword />)});
     }
@@ -57,6 +73,7 @@ export const initRoutes = (context, actions) => {
 
   FlowRouter.route('/team/add', {
     name: 'teamAdd',
+    triggersEnter: [checkLoggedIn],
     action: function () {
       mount(MainLayoutCtx, {content: () => (<TeamAdd />)});
     }
@@ -78,6 +95,7 @@ export const initRoutes = (context, actions) => {
 
   FlowRouter.route('/document/add', {
     name: 'documentAdd',
+    triggersEnter: [checkLoggedIn],
     action: function () {
       mount(MainLayoutCtx, {content: () => (<DocumentAdd />)});
     }
