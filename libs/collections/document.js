@@ -1,4 +1,14 @@
+import {Random} from 'meteor/random';
+
 const DocumentSchema = new SimpleSchema({
+  _id: {
+    type: String,
+    autoValue: function() {
+      if (this.isInsert) {
+        return Random.id(24);
+      }
+    }
+  },
   name: {
     type: String,
     label: '文档名',

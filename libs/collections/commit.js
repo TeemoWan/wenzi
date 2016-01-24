@@ -1,4 +1,14 @@
+import {Random} from 'meteor/random';
+
 const CommitSchema = new SimpleSchema({
+  _id: {
+    type: String,
+    autoValue: function() {
+      if (this.isInsert) {
+        return Random.id(24);
+      }
+    }
+  },
   // 提交对应的分支id
   branchId: {
     type: String

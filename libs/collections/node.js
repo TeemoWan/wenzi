@@ -1,4 +1,14 @@
+import {Random} from 'meteor/random';
+
 const NodeSchema = new SimpleSchema({
+  _id: {
+    type: String,
+    autoValue: function() {
+      if (this.isInsert) {
+        return Random.id(24);
+      }
+    }
+  },
   hash: {
     type: String
     //max: 40,

@@ -1,4 +1,14 @@
+import {Random} from 'meteor/random';
+
 const BranchSchema = new SimpleSchema({
+  _id: {
+    type: String,
+    autoValue: function() {
+      if (this.isInsert) {
+        return Random.id(24);
+      }
+    }
+  },
   name: {
     type: String,
     label: '分支',
