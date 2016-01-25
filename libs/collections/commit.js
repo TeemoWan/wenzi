@@ -19,11 +19,11 @@ const CommitSchema = new SimpleSchema({
   committedAt: {
     type: Date,
     denyUpdate: true,
-    autoValue: function () {
+    autoValue: function() {
       if (this.isInsert) {
-        return new Date;
+        return new Date();
       } else if (this.isUpsert) {
-        return {$setOnInsert: new Date};
+        return {$setOnInsert: new Date()};
       } else {
         this.unset();
       }
@@ -62,19 +62,19 @@ const CommitSchema = new SimpleSchema({
   // 提交统计
   'statistics.chapterCount': {
     type: Number,
-    autoValue: function () {
+    autoValue: function() {
       return 0;
     }
   },
   'statistics.addCount': {
     type: Number,
-    autoValue: function () {
+    autoValue: function() {
       return 0;
     }
   },
   'statistics.deleteCount': {
     type: Number,
-    autoValue: function () {
+    autoValue: function() {
       return 0;
     }
   }
@@ -84,13 +84,13 @@ let Commits = new Mongo.Collection('commits');
 Commits.attachSchema(CommitSchema);
 
 Commits.allow({
-  'insert': function (userId, commit) {
+  insert: (userId, document) => {
     return true;
   },
-  'update': function (userId, commit) {
+  update: (userId, document) => {
     return false;
   },
-  'remove': function (userId, commit) {
+  remove: (userId, document) => {
     return false;
   }
 });

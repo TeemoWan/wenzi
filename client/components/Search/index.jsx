@@ -10,7 +10,7 @@ const Search = React.createClass({
         </div>
         <div className='results'></div>
       </div>
-    )
+    );
   }
 });
 

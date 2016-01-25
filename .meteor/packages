@@ -19,8 +19,6 @@ ecmascript
 accounts-password
 aldeed:collection2
 kadira:flow-router
-kadira:flow-router-ssr
 alanning:roles
-stylus
 semantic:ui
 flemay:less-autoprefixer

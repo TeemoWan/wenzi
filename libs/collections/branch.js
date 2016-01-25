@@ -26,11 +26,11 @@ const BranchSchema = new SimpleSchema({
   createdAt: {
     type: Date,
     denyUpdate: true,
-    autoValue: function () {
+    autoValue: function() {
       if (this.isInsert) {
-        return new Date;
+        return new Date();
       } else if (this.isUpsert) {
-        return {$setOnInsert: new Date};
+        return {$setOnInsert: new Date()};
       } else {
         this.unset();
       }
@@ -54,13 +54,13 @@ let Branches = new Mongo.Collection('branches');
 Branches.attachSchema(BranchSchema);
 
 Branches.allow({
-  'insert': function (userId, document) {
+  insert: (userId, document) => {
     return true;
   },
-  'update': function (userId, document) {
+  update: (userId, document) => {
     return true;
   },
-  'remove': function (userId, document) {
+  remove: (userId, document) => {
     return false;
   }
 });

@@ -1,13 +1,13 @@
-import Collections from '/libs/collections';
+import Collections from '../../libs/collections';
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
-Meteor.publish('team', function(id) {
+Meteor.publish('team', id => {
   check(id, String);
   return Collections.Teams.find({_id: id});
 });
 
-Meteor.publish('teamsByAdmins', function(id) {
+Meteor.publish('teamsByAdmins', id => {
   check(id, String);
   return Collections.Teams.find({admins: id});
 });

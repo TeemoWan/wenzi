@@ -5,10 +5,10 @@ const Login = React.createClass({
   render() {
     const {FlowRouter, error, processing} = this.props;
     const formClass = classNames({
-      'ui': true,
-      'large': true,
-      'form': true,
-      'error': !!error
+      ui: true,
+      large: true,
+      form: true,
+      error: Boolean(error)
     });
 
     return (
@@ -35,21 +35,21 @@ const Login = React.createClass({
                     <input type='password' ref='password' placeholder='密码' onKeyDown={this.handlePasswordEnterKeyDown}/>
                   </div>
                 </div>
-                {processing
-                  ? <div className='ui fluid large loading disabled button'></div>
-                  : <div className='ui fluid large teal button' onClick={this.handleSubmit}>登录</div>}
+                {processing ?
+                  <div className='ui fluid large loading disabled button'></div> :
+                  <div className='ui fluid large teal button' onClick={this.handleSubmit}>登录</div>}
               </div>
               {error ? <div className='ui error message'><p>{error}</p></div> : null}
             </form>
 
             <div className='ui message'>
-              新用户? <a href='' onClick={(e) => FlowRouter.go('/register')}>注册</a> |
-              <a href='' onClick={(e) => FlowRouter.go('/forgotPassword')}>忘记密码</a>
+              新用户? <a href='' onClick={() => FlowRouter.go('/register')}>注册</a> |
+              <a href='' onClick={() => FlowRouter.go('/forgotPassword')}>忘记密码</a>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   },
 
   handleEmailEnterKeyDown(event) {

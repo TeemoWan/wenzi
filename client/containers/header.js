@@ -9,7 +9,12 @@ export const composer = ({Meteor}, onData) => {
 
 export const depsMapper = (context, actions) => ({
   Meteor: context.Meteor,
-  FlowRouter: context.FlowRouter
+  FlowRouter: context.FlowRouter,
+  logout: actions.auth.logout,
+  gotoUser: actions.layout.gotoUser,
+  gotoDocumentIndex: actions.layout.gotoDocumentIndex,
+  gotoDocumentAdd: actions.layout.gotoDocumentAdd,
+  gotoTeamAdd: actions.layout.gotoTeamAdd
 });
 
 export default composeAll(

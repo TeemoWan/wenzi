@@ -5,9 +5,9 @@ const TeamAdd = React.createClass({
   render() {
     const {error, processing} = this.props;
     const formClass = classNames({
-      'ui': true,
-      'form': true,
-      'error': !!error
+      ui: true,
+      form: true,
+      error: Boolean(error)
     });
 
     return (
@@ -26,15 +26,15 @@ const TeamAdd = React.createClass({
                 <label>团队简介</label>
                 <textarea type='text' ref='summary' placeholder='团队简介...' rows='3' />
               </div>
-              {processing
-                ? <div className='ui teal loading disabled button'></div>
-                : <div className='ui teal button' onClick={this.handleSubmit}>创建团队</div>}
+              {processing ?
+                <div className='ui teal loading disabled button'></div> :
+                <div className='ui teal button' onClick={this.handleSubmit}>创建团队</div>}
             </form>
           </div>
           <div className='two wide column'></div>
         </div>
       </div>
-    )
+    );
   },
 
   handleSubmit() {

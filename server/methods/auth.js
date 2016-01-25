@@ -1,5 +1,6 @@
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
+import {Accounts} from 'meteor/accounts-base';
 import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
 Meteor.methods({
@@ -44,10 +45,6 @@ Meteor.methods({
       throw new Meteor.Error('passwordNotValid', '密码格式不正确，必须使用大小写字母、数字、特殊字符，长度6到16个字符');
     }
 
-    return Accounts.createUser({
-      email: email,
-      username: username,
-      password: password
-    });
+    return Accounts.createUser({email, username, password});
   }
 });

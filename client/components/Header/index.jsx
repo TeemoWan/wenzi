@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from '../Search/index.jsx';
-import '/client/lib/semantic-ui/definitions/modules/transition.js';
-import '/client/lib/semantic-ui/definitions/modules/dropdown.js';
+import '../../lib/semantic-ui/definitions/modules/transition.js';
+import '../../lib/semantic-ui/definitions/modules/dropdown.js';
 
 const Header = React.createClass({
   componentDidMount() {
@@ -13,7 +13,7 @@ const Header = React.createClass({
   },
 
   render() {
-    let {FlowRouter, user} = this.props;
+    let {user, gotoUser, logout, gotoDocumentIndex, gotoDocumentAdd, gotoTeamAdd} = this.props;
     let userItem;
 
     if (user) {
@@ -22,7 +22,7 @@ const Header = React.createClass({
         {user.username}
         <i className='dropdown icon'/>
         <div className='menu'>
-          <div className='item' onClick={(e) => FlowRouter.go(`/user/${user._id}`)}>
+          <div className='item' onClick={() => gotoUser(user._id)}>
             <i className='home icon'/>
             主页
           </div>
@@ -31,14 +31,14 @@ const Header = React.createClass({
             设置
           </div>
           <div className='divider'></div>
-          <div className='item' onClick={e => Meteor.logout()}>
+          <div className='item' onClick={() => logout()}>
             <i className='sign out icon'/>
             登出
           </div>
         </div>
       </div>;
     } else {
-      userItem = <a className='item' onClick={(e) => FlowRouter.go('/login')}>
+      userItem = <a className='item' href='/login'>
         <i className='sign in icon'/>
         注册或登录
       </a>;
@@ -47,13 +47,13 @@ const Header = React.createClass({
     return (
       <div className='ui fixed borderless menu' id='header'>
         <div className='ui container'>
-          <a className='item' onClick={(e) => FlowRouter.go('/')}>
+          <a className='item' href='/'>
             <img src='/images/logo.png'/>
           </a>
           <div className='ui dropdown icon item'>
             <i className='sidebar icon'/>
             <div className='menu'>
-              <div className='item' onClick={(e) => FlowRouter.go('/document')}>
+              <div className='item' onClick={() => gotoDocumentIndex()}>
                 文档
               </div>
               <div className='item'>
@@ -69,7 +69,7 @@ const Header = React.createClass({
             <div className='ui right dropdown icon item'>
               <i className='plus icon'/>
               <div className='menu'>
-                <div className='item' onClick={(e) => FlowRouter.go('/document/add')}>
+                <div className='item' onClick={() => gotoDocumentAdd()}>
                   <i className='book icon'/>
                   文档项目
                 </div>
@@ -86,7 +86,7 @@ const Header = React.createClass({
                   结点
                 </div>
                 <div className='divider'></div>
-                <div className='item' onClick={(e) => FlowRouter.go('/team/add')}>
+                <div className='item' onClick={() => gotoTeamAdd()}>
                   <i className='users icon'/>
                   团队
                 </div>
@@ -96,7 +96,7 @@ const Header = React.createClass({
           </div>
         </div>
       </div>
-    )
+    );
   }
 });
 

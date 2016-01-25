@@ -9,7 +9,7 @@ export default {
     LocalState.set('LOGIN_ERROR', null);
     LocalState.set('LOGIN_PROCESSING', true);
 
-    Meteor.loginWithPassword(email, password, (err, res) => {
+    Meteor.loginWithPassword(email, password, (err) => {
       if (err) {
         LocalState.set('LOGIN_PROCESSING', false);
         LocalState.set('LOGIN_ERROR', err.reason);
@@ -57,12 +57,12 @@ export default {
     LocalState.set('REGISTER_ERROR', null);
     LocalState.set('REGISTER_PROCESSING', true);
 
-    Meteor.call('register', email, username, password, (err, res) => {
+    Meteor.call('register', email, username, password, (err) => {
       if (err) {
         LocalState.set('REGISTER_PROCESSING', false);
         LocalState.set('REGISTER_ERROR', err.reason);
       } else {
-        Meteor.loginWithPassword(email, password, (err, res) => {
+        Meteor.loginWithPassword(email, password, (err) => {
           if (err) {
             LocalState.set('REGISTER_PROCESSING', false);
             LocalState.set('REGISTER_ERROR', err.reason);
@@ -91,5 +91,9 @@ export default {
   clearForgotPassword({LocalState}) {
     LocalState.set('FORGOTPASSWORD_ERROR', null);
     LocalState.set('FORGOTPASSWORD_PROCESSING', false);
+  },
+
+  logout({Meteor}) {
+    Meteor.logout();
   }
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
-import '/client/lib/semantic-ui/definitions/modules/transition.js';
-import '/client/lib/semantic-ui/definitions/modules/dropdown.js';
+import '../../lib/semantic-ui/definitions/modules/transition.js';
+import '../../lib/semantic-ui/definitions/modules/dropdown.js';
 
 const DocumentAdd = React.createClass({
   componentDidMount() {
-    const {loading, user}= this.props;
+    const {loading, user} = this.props;
 
     if (loading) {
       $('.ui.dropdown').dropdown();
@@ -15,7 +15,7 @@ const DocumentAdd = React.createClass({
   },
 
   componentDidUpdate() {
-    const {loading, user}= this.props;
+    const {loading, user} = this.props;
 
     if (loading) {
       $('.ui.dropdown').dropdown();
@@ -25,11 +25,11 @@ const DocumentAdd = React.createClass({
   },
 
   render() {
-    const {error, processing, loading, user, teams}= this.props;
+    const {error, processing, loading, user, teams} = this.props;
     const formClass = classNames({
-      'ui': true,
-      'form': true,
-      'error': !!error
+      ui: true,
+      form: true,
+      error: Boolean(error)
     });
 
     let items = [];
@@ -52,50 +52,50 @@ const DocumentAdd = React.createClass({
 
     return (
       <div className='ui main container' id='content'>
-        {loading
-          ? <div className='ui active large centered loader'></div>
-          : <div className='ui grid'>
-              <div className='two wide column'></div>
-              <div className='twelve wide column'>
-                <form className={formClass}>
-                  <h2 className='ui dividing header'>添加文档</h2>
-                  {error ? <div className='ui error message'><p>{error}</p></div> : null}
-                  <div className='fields'>
-                    <div className='five wide field'>
-                      <label>所有者</label>
-                      <div className='ui fluid selection dropdown'>
-                        <input type='hidden' name='owner' ref='owner' />
-                        <i className='dropdown icon'/>
-                        <div className='default text'>所有者</div>
-                        <div className='menu'>
-                          {items}
-                        </div>
+        {loading ?
+          <div className='ui active medium centered loader'></div> :
+          <div className='ui grid'>
+            <div className='two wide column'></div>
+            <div className='twelve wide column'>
+              <form className={formClass}>
+                <h2 className='ui dividing header'>添加文档</h2>
+                {error ? <div className='ui error message'><p>{error}</p></div> : null}
+                <div className='fields'>
+                  <div className='five wide field'>
+                    <label>所有者</label>
+                    <div className='ui fluid selection dropdown'>
+                      <input type='hidden' name='owner' ref='owner' />
+                      <i className='dropdown icon'/>
+                      <div className='default text'>所有者</div>
+                      <div className='menu'>
+                        {items}
                       </div>
                     </div>
-                    <div className='eleven wide field'>
-                      <label>文档名</label>
-                      <input type='text' ref='name' placeholder='文档名' />
-                    </div>
                   </div>
-                  <div className='field'>
-                    <label>文档简介</label>
-                    <textarea ref='summary' placeholder='文档简介...' />
+                  <div className='eleven wide field'>
+                    <label>文档名</label>
+                    <input type='text' ref='name' placeholder='文档名' />
                   </div>
-                  {processing
-                    ? <div className='ui teal loading disabled button'></div>
-                    : <div className='ui teal button' onClick={this.handleSubmit}>添加文档</div>}
-                </form>
-              </div>
-              <div className='two wide column'></div>
-            </div>}
+                </div>
+                <div className='field'>
+                  <label>文档简介</label>
+                  <textarea ref='summary' placeholder='文档简介...' />
+                </div>
+                {processing ?
+                  <div className='ui teal loading disabled button'></div> :
+                  <div className='ui teal button' onClick={this.handleSubmit}>添加文档</div>}
+              </form>
+            </div>
+            <div className='two wide column'></div>
+          </div>}
       </div>
-    )
+    );
   },
 
   handleSubmit() {
     const {documentAdd} = this.props;
     const {owner, name, summary} = this.refs;
-    const [ownerType, ownerId] = owner.value.split(':');
+    const [ ownerType, ownerId ] = owner.value.split(':');
 
     documentAdd(ownerType, ownerId, name.value.trim(), summary.value);
   }

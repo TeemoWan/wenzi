@@ -6,7 +6,7 @@ const Home = React.createClass({
       <div className='ui main container' id='content'>
         首页
       </div>
-    )
+    );
   }
 });
 

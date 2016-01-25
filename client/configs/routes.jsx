@@ -35,81 +35,81 @@ export const initRoutes = (context, actions) => {
 
   FlowRouter.route('/', {
     name: 'appHome',
-    action: function () {
+    action: () => {
       mount(MainLayoutCtx, {content: () => (<Home />)});
     }
   });
 
   FlowRouter.route('/login', {
     name: 'login',
-    triggersEnter: [redirectIfLoggedIn],
-    action: function () {
+    triggersEnter: [ redirectIfLoggedIn ],
+    action: () => {
       mount(AuthLayoutCtx, {content: () => (<Login />)});
     }
   });
 
   FlowRouter.route('/register', {
     name: 'register',
-    triggersEnter: [redirectIfLoggedIn],
-    action: function () {
+    triggersEnter: [ redirectIfLoggedIn ],
+    action: () => {
       mount(AuthLayoutCtx, {content: () => (<Register />)});
     }
   });
 
   FlowRouter.route('/forgotPassword', {
     name: 'forgotPassword',
-    triggersEnter: [redirectIfLoggedIn],
-    action: function () {
+    triggersEnter: [ redirectIfLoggedIn ],
+    action: () => {
       mount(AuthLayoutCtx, {content: () => (<ForgotPassword />)});
     }
   });
 
   FlowRouter.route('/user/:userId', {
     name: 'user',
-    action: function ({userId}) {
+    action: ({userId}) => {
       mount(MainLayoutCtx, {content: () => (<User userId={userId}/>)});
     }
   });
 
   FlowRouter.route('/team/add', {
     name: 'teamAdd',
-    triggersEnter: [checkLoggedIn],
-    action: function () {
+    triggersEnter: [ checkLoggedIn ],
+    action: () => {
       mount(MainLayoutCtx, {content: () => (<TeamAdd />)});
     }
   });
 
   FlowRouter.route('/team/:teamId', {
     name: 'team',
-    action: function ({teamId}) {
+    action: ({teamId}) => {
       mount(MainLayoutCtx, {content: () => (<Team teamId={teamId}/>)});
     }
   });
 
   FlowRouter.route('/document', {
     name: 'documentIndex',
-    action: function () {
+    action: () => {
       mount(MainLayoutCtx, {content: () => (<DocumentIndex />)});
     }
   });
 
   FlowRouter.route('/document/add', {
     name: 'documentAdd',
-    triggersEnter: [checkLoggedIn],
-    action: function () {
+    triggersEnter: [ checkLoggedIn ],
+    action: () => {
       mount(MainLayoutCtx, {content: () => (<DocumentAdd />)});
     }
   });
 
   FlowRouter.route('/document/:documentId', {
     name: 'document',
-    action: function ({documentId}) {
+    action: ({documentId}) => {
       mount(MainLayoutCtx, {content: () => (<Document documentId={documentId}/>)});
     }
   });
 
   FlowRouter.notFound = {
-    action: function () {
+    action: () => {
       mount(MainLayoutCtx, {content: () => (<NotFound />)});
     }
   };

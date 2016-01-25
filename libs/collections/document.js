@@ -28,9 +28,9 @@ const DocumentSchema = new SimpleSchema({
     denyUpdate: true,
     autoValue: function () {
       if (this.isInsert) {
-        return new Date;
+        return new Date();
       } else if (this.isUpsert) {
-        return {$setOnInsert: new Date};
+        return {$setOnInsert: new Date()};
       } else {
         this.unset();
       }
@@ -108,13 +108,13 @@ let Documents = new Mongo.Collection('documents');
 Documents.attachSchema(DocumentSchema);
 
 Documents.allow({
-  'insert': function (userId, document) {
+  insert: (userId, document) => {
     return true;
   },
-  'update': function (userId, document) {
+  update: (userId, document) => {
     return true;
   },
-  'remove': function (userId, document) {
+  remove: (userId, document) => {
     return false;
   }
 });

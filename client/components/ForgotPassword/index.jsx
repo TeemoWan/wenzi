@@ -1,9 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
 
 const ForgotPassword = React.createClass({
   render() {
-    const {FlowRouter, error} = this.props;
+    const {error} = this.props;
 
     return (
       <div id='forgot-password'>
@@ -29,12 +28,12 @@ const ForgotPassword = React.createClass({
             </form>
 
             <div className='ui message'>
-              <a href='' onClick={(e) => FlowRouter.go('/login')}>返回登录页</a>
+              <a href='/login'>返回登录页</a>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   },
 
   handleEmailEnterKeyDown(event) {

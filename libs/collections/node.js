@@ -58,13 +58,13 @@ let Nodes = new Mongo.Collection('nodes');
 Nodes.attachSchema(NodeSchema);
 
 Nodes.allow({
-  'insert': function (userId, document) {
+  insert: (userId, document) => {
     return true;
   },
-  'update': function (userId, document) {
+  update: (userId, document) => {
     return true;
   },
-  'remove': function (userId, document) {
+  remove: (userId, document) => {
     return false;
   }
 });

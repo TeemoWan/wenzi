@@ -4,7 +4,6 @@ import Document from '../components/Document/index.jsx';
 
 export const composer = ({context, documentId}, onData) => {
   const {Meteor, Collections} = context();
-
   const handle = Meteor.subscribe('document', documentId);
   const loading = !handle.ready();
   const document = Collections.Documents.findOne(documentId);

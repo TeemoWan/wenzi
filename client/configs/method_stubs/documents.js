@@ -1,4 +1,4 @@
-import {Documents} from '/libs/collections';
+import Collections from '../../../libs/collections';
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
@@ -14,7 +14,7 @@ export default function () {
         _id, name, summary, createdAt,
         saving: true
       };
-      Documents.insert(document);
+      Collections.Documents.insert(document);
     }
   });
 }

@@ -4,11 +4,10 @@ import DocumentIndex from '../components/DocumentIndex/index.jsx';
 
 export const composer = ({Meteor, Collections}, onData) => {
   const handle = Meteor.subscribe('documents', 20);
-  let loading = true;
+  const loading = !handle.ready();
   let documents = [];
 
-  if (handle.ready()) {
-    loading = false;
+  if (!loading) {
     documents = Collections.Documents.find({}, {sort: {createdAt: -1}, limit: 20}).fetch();
 
     documents.forEach(document => {

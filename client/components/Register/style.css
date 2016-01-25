@@ -1,0 +1,15 @@
+body .wrapper #register {
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  height: 100%;
+  background-color: #DADADA;
+}
+
+body .wrapper #register > .grid {
+  height: 100%;
+}
+
+body .wrapper #register .column {
+  max-width: 450px;
+}

@@ -1,4 +1,4 @@
-import Collections from '/libs/collections';
+import Collections from '../../libs/collections';
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
@@ -23,12 +23,12 @@ Meteor.methods({
     }
 
     return Collections.Documents.insert({
-      name: name,
-      summary: summary,
+      name,
+      summary,
       createdBy: this.userId,
       owner: {
-        ownerType: ownerType,
-        ownerId: ownerId
+        ownerType,
+        ownerId
       }
     });
   }

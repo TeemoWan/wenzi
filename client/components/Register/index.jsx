@@ -5,10 +5,10 @@ const Register = React.createClass({
   render() {
     const {FlowRouter, error, processing} = this.props;
     const formClass = classNames({
-      'ui': true,
-      'large': true,
-      'form': true,
-      'error': !!error
+      ui: true,
+      large: true,
+      form: true,
+      error: Boolean(error)
     });
 
     return (
@@ -44,21 +44,21 @@ const Register = React.createClass({
                              onKeyDown={this.handlePasswordEnterKeyDown}/>
                     </div>
                   </div>
-                  {processing
-                    ? <div className='ui fluid large loading disabled button'></div>
-                    : <div className='ui fluid large teal button' onClick={this.handleSubmit}>注册</div>}
+                  {processing ?
+                    <div className='ui fluid large loading disabled button'></div> :
+                    <div className='ui fluid large teal button' onClick={this.handleSubmit}>注册</div>}
                 </div>
                 {error ? <div className='ui error message'><p>{error}</p></div> : null}
               </form>
 
               <div className='ui message'>
-                已经注册了? <a href='' onClick={(e) => FlowRouter.go('/login')}>登录</a>
+                已经注册了? <a href='' onClick={() => FlowRouter.go('/login')}>登录</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   },
 
   handleEmailEnterKeyDown(event) {

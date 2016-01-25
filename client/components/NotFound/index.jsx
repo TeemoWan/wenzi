@@ -6,7 +6,7 @@ const NotFound = React.createClass({
       <div className='ui main container' id='content'>
         404
       </div>
-    )
+    );
   }
 });
 

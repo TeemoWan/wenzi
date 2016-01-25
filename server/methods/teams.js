@@ -1,4 +1,4 @@
-import Collections from '/libs/collections';
+import Collections from '../../libs/collections';
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
@@ -21,10 +21,10 @@ Meteor.methods({
     }
 
     return Collections.Teams.insert({
-      name: name,
-      summary: summary,
-      admins: [this.userId],
-      members: [this.userId]
+      name,
+      summary,
+      admins: [ this.userId ],
+      members: [ this.userId ]
     });
   }
 });
