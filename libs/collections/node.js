@@ -1,9 +1,11 @@
 import {Random} from 'meteor/random';
+import {Mongo} from 'meteor/mongo';
+import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
 const NodeSchema = new SimpleSchema({
   _id: {
     type: String,
-    autoValue: function() {
+    autoValue: function () {
       if (this.isInsert) {
         return Random.id(24);
       }
@@ -11,7 +13,7 @@ const NodeSchema = new SimpleSchema({
   },
   hash: {
     type: String
-    //max: 40,
+    // max: 40,
   },
   type: {
     type: String

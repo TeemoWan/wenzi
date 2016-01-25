@@ -1,3 +1,5 @@
+import {SimpleSchema} from 'meteor/aldeed:simple-schema';
+
 SimpleSchema.messages({
   required: '请填写[label]',// '[label] is required',
   minString: '[label]不少于[min]个字符', // '[label] must be at least [min] characters',

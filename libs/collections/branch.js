@@ -1,9 +1,11 @@
 import {Random} from 'meteor/random';
+import {Mongo} from 'meteor/mongo';
+import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
 const BranchSchema = new SimpleSchema({
   _id: {
     type: String,
-    autoValue: function() {
+    autoValue: function () {
       if (this.isInsert) {
         return Random.id(24);
       }
@@ -26,7 +28,7 @@ const BranchSchema = new SimpleSchema({
   createdAt: {
     type: Date,
     denyUpdate: true,
-    autoValue: function() {
+    autoValue: function () {
       if (this.isInsert) {
         return new Date();
       } else if (this.isUpsert) {

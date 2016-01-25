@@ -1,9 +1,11 @@
 import {Random} from 'meteor/random';
+import {Mongo} from 'meteor/mongo';
+import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
 const CommitSchema = new SimpleSchema({
   _id: {
     type: String,
-    autoValue: function() {
+    autoValue: function () {
       if (this.isInsert) {
         return Random.id(24);
       }
@@ -19,7 +21,7 @@ const CommitSchema = new SimpleSchema({
   committedAt: {
     type: Date,
     denyUpdate: true,
-    autoValue: function() {
+    autoValue: function () {
       if (this.isInsert) {
         return new Date();
       } else if (this.isUpsert) {
@@ -62,19 +64,19 @@ const CommitSchema = new SimpleSchema({
   // 提交统计
   'statistics.chapterCount': {
     type: Number,
-    autoValue: function() {
+    autoValue: function () {
       return 0;
     }
   },
   'statistics.addCount': {
     type: Number,
-    autoValue: function() {
+    autoValue: function () {
       return 0;
     }
   },
   'statistics.deleteCount': {
     type: Number,
-    autoValue: function() {
+    autoValue: function () {
       return 0;
     }
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import {$} from 'meteor/jquery';
 import classNames from 'classnames';
 import '../../lib/semantic-ui/definitions/modules/transition.js';
 import '../../lib/semantic-ui/definitions/modules/dropdown.js';

@@ -1,3 +1,6 @@
+import {Meteor} from 'meteor/meteor';
+import {SimpleSchema} from 'meteor/aldeed:simple-schema';
+
 const UserSchema = new SimpleSchema({
   username: {
     type: String,
@@ -5,7 +8,7 @@ const UserSchema = new SimpleSchema({
     regEx: /^[a-zA-Z0-9_\u4e00-\u9fa5]{2,16}$/
   },
   emails: {
-    type: [Object]
+    type: [ Object ]
   },
   'emails.$.address': {
     type: String,

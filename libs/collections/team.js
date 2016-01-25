@@ -1,9 +1,11 @@
 import {Random} from 'meteor/random';
+import {Mongo} from 'meteor/mongo';
+import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
 const TeemSchema = new SimpleSchema({
   _id: {
     type: String,
-    autoValue: function() {
+    autoValue: function () {
       if (this.isInsert) {
         return Random.id(24);
       }
@@ -21,11 +23,11 @@ const TeemSchema = new SimpleSchema({
     optional: true
   },
   admins: {
-    type: [String],
+    type: [ String ],
     label: '团队管理员'
   },
   members: {
-    type: [String],
+    type: [ String ],
     label: '团队成员'
   },
   documentCount: {

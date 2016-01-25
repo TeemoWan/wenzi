@@ -1,4 +1,5 @@
 import React from 'react';
+import {$} from 'meteor/jquery';
 import Search from '../Search/index.jsx';
 import '../../lib/semantic-ui/definitions/modules/transition.js';
 import '../../lib/semantic-ui/definitions/modules/dropdown.js';
