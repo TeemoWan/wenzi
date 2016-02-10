@@ -5,7 +5,20 @@ import _ from 'lodash';
 
 Meteor.publish('document', id => {
   check(id, String);
-  return Collections.Documents.find({_id: id});
+  let document = Collections.Documents.findOne({_id: id});
+  let {ownerType, ownerId} = document.owner;
+
+  if (ownerType === 'user') {
+    return [
+      Collections.Documents.find({_id: id}),
+      Collections.Users.find({_id: ownerId})
+    ];
+  } else {
+    return [
+      Collections.Documents.find({_id: id}),
+      Collections.Teams.find({_id: ownerId})
+    ];
+  }
 });
 
 Meteor.publish('documents', limit => {

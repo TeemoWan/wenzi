@@ -1,18 +1,21 @@
 import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
+import Loading from '../components/Loading/index.jsx';
 import User from '../components/User/index.jsx';
 
-export const composer = ({context, userId}, onData) => {
-  const {Meteor, Collections} = context();
-
-  const handle = Meteor.subscribe('user', userId);
-  const loading = !handle.ready();
-  const user = Collections.Users.findOne(userId);
-
-  onData(null, {user, loading});
+const composer = ({Meteor, Collections, userId}, onData) => {
+  if (Meteor.subscribe('user', userId).ready()) {
+    let user = Collections.Users.findOne(userId);
+    onData(null, {user});
+  }
 };
 
+const depsMapper = (context, actions) => ({
+  Meteor: context.Meteor,
+  Collections: context.Collections
+});
+
 export default composeAll(
-  composeWithTracker(composer),
-  useDeps()
+  composeWithTracker(composer, Loading),
+  useDeps(depsMapper)
 )(User);

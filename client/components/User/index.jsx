@@ -2,14 +2,10 @@ import React from 'react';
 
 const User = React.createClass({
   render() {
-    const {user, loading} = this.props;
+    const {user} = this.props;
 
     return (
-      <div className='ui main container' id='content'>
-        {loading ?
-          <div className='ui active medium centered loader'></div> :
-          <span>{user.username}</span>}
-      </div>
+      <div id='user'>{user.username}</div>
     );
   }
 });

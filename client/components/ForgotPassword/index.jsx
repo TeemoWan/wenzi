@@ -24,7 +24,7 @@ const ForgotPassword = React.createClass({
                 </div>
                 <div className='ui fluid large teal submit button' onClick={this.handleSubmit}>找回密码</div>
               </div>
-              {error ? <div className='ui error message'><p>{error}</p></div> : null}
+              {error && <div className='ui error message'><p>{error}</p></div>}
             </form>
 
             <div className='ui message'>

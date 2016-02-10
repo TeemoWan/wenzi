@@ -5,7 +5,9 @@ import Footer from '../Footer/index.jsx';
 const MainLayout = ({content = () => null }) => (
   <div className='wrapper'>
     <Header/>
-    {content()}
+    <div className='ui main container' id='content'>
+      {content()}
+    </div>
     <Footer/>
   </div>
 );

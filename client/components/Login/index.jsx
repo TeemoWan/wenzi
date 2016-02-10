@@ -4,12 +4,6 @@ import classNames from 'classnames';
 const Login = React.createClass({
   render() {
     const {FlowRouter, error, processing} = this.props;
-    const formClass = classNames({
-      ui: true,
-      large: true,
-      form: true,
-      error: Boolean(error)
-    });
 
     return (
       <div id='login'>
@@ -21,7 +15,7 @@ const Login = React.createClass({
                 登录文字工匠
               </div>
             </h2>
-            <form className={formClass}>
+            <form className={classNames('ui', 'large', 'form', {error: Boolean(error)})}>
               <div className='ui stacked segment'>
                 <div className='field'>
                   <div className='ui left icon input'>
@@ -36,10 +30,10 @@ const Login = React.createClass({
                   </div>
                 </div>
                 {processing ?
-                  <div className='ui fluid large loading disabled button'></div> :
+                  <div className='ui fluid large loading button'>&nbsp;</div> :
                   <div className='ui fluid large teal button' onClick={this.handleSubmit}>登录</div>}
               </div>
-              {error ? <div className='ui error message'><p>{error}</p></div> : null}
+              {error && <div className='ui error message'><p>{error}</p></div>}
             </form>
 
             <div className='ui message'>

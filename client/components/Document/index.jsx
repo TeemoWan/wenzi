@@ -1,14 +1,15 @@
 import React from 'react';
+import DocumentHeader from '../../containers/documentHeader';
+import DocumentStructure from '../../components/DocumentStructure/index.jsx';
 
 const Document = React.createClass({
   render() {
-    const {document, loading} = this.props;
+    const {document, owner, tree} = this.props;
 
     return (
-      <div className='ui main container' id='content'>
-        {loading ?
-          <div className='ui active medium centered loader'></div> :
-          <span>{document.name}</span>}
+      <div>
+        <DocumentHeader document={document} owner={owner}/>
+        <DocumentStructure tree={tree}/>
       </div>
     );
   }

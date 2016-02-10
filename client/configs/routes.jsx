@@ -5,6 +5,7 @@ import {Meteor} from 'meteor/meteor';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import MainLayout from '../components/MainLayout/index.jsx';
 import AuthLayout from '../components/AuthLayout/index.jsx';
+import FluidLayout from '../components/FluidLayout/index.jsx';
 import Home from '../components/Home/index.jsx';
 import NotFound from '../components/NotFound/index.jsx';
 import Login from '../containers/login';
@@ -16,6 +17,7 @@ import Team from '../containers/team';
 import DocumentIndex from '../containers/documentIndex';
 import DocumentAdd from '../containers/documentAdd';
 import Document from '../containers/document';
+import DocumentEdit from '../containers/documentEdit';
 
 const checkLoggedIn = () => {
   if (!Meteor.loggingIn() && !Meteor.userId()) {
@@ -32,6 +34,7 @@ const redirectIfLoggedIn = (ctx, redirect) => {
 export const initRoutes = (context, actions) => {
   const MainLayoutCtx = injectDeps(context, actions)(MainLayout);
   const AuthLayoutCtx = injectDeps(context, actions)(AuthLayout);
+  const FluidLayoutCtx = injectDeps(context, actions)(FluidLayout);
 
   FlowRouter.route('/', {
     name: 'appHome',
@@ -64,10 +67,10 @@ export const initRoutes = (context, actions) => {
     }
   });
 
-  FlowRouter.route('/user/:userId', {
+  FlowRouter.route('/user/:id', {
     name: 'user',
-    action: ({userId}) => {
-      mount(MainLayoutCtx, {content: () => (<User userId={userId}/>)});
+    action: ({id}) => {
+      mount(MainLayoutCtx, {content: () => (<User userId={id}/>)});
     }
   });
 
@@ -79,10 +82,10 @@ export const initRoutes = (context, actions) => {
     }
   });
 
-  FlowRouter.route('/team/:teamId', {
+  FlowRouter.route('/team/:id', {
     name: 'team',
-    action: ({teamId}) => {
-      mount(MainLayoutCtx, {content: () => (<Team teamId={teamId}/>)});
+    action: ({id}) => {
+      mount(MainLayoutCtx, {content: () => (<Team teamId={id}/>)});
     }
   });
 
@@ -101,10 +104,18 @@ export const initRoutes = (context, actions) => {
     }
   });
 
-  FlowRouter.route('/document/:documentId', {
+  FlowRouter.route('/document/:id', {
     name: 'document',
-    action: ({documentId}) => {
-      mount(MainLayoutCtx, {content: () => (<Document documentId={documentId}/>)});
+    action: ({id}) => {
+      mount(MainLayoutCtx, {content: () => (<Document documentId={id}/>)});
+    }
+  });
+
+  FlowRouter.route('/document/:id/edit', {
+    name: 'documentEdit',
+    triggersEnter: [ checkLoggedIn ],
+    action: ({id}) => {
+      mount(FluidLayoutCtx, {content: () => (<DocumentEdit documentId={id}/>)});
     }
   });
 

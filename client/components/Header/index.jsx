@@ -14,7 +14,7 @@ const Header = React.createClass({
   },
 
   render() {
-    let {user, gotoUser, logout, gotoDocumentIndex, gotoDocumentAdd, gotoTeamAdd} = this.props;
+    let {user, logout} = this.props;
     let userItem;
 
     if (user) {
@@ -23,19 +23,19 @@ const Header = React.createClass({
         {user.username}
         <i className='dropdown icon'/>
         <div className='menu'>
-          <div className='item' onClick={() => gotoUser(user._id)}>
+          <a className='item' href={`/user/${user._id}`}>
             <i className='home icon'/>
             主页
-          </div>
-          <div className='item'>
+          </a>
+          <a className='item'>
             <i className='setting icon'/>
             设置
-          </div>
+          </a>
           <div className='divider'></div>
-          <div className='item' onClick={() => logout()}>
+          <a className='item' onClick={() => logout()}>
             <i className='sign out icon'/>
             登出
-          </div>
+          </a>
         </div>
       </div>;
     } else {
@@ -47,54 +47,52 @@ const Header = React.createClass({
 
     return (
       <div className='ui fixed borderless menu' id='header'>
-        <div className='ui container'>
-          <a className='item' href='/'>
-            <img src='/images/logo.png'/>
-          </a>
-          <div className='ui dropdown icon item'>
-            <i className='sidebar icon'/>
+        <a className='item' href='/'>
+          <img src='/images/logo.png'/>
+        </a>
+        <div className='ui dropdown icon item'>
+          <i className='sidebar icon'/>
+          <div className='menu'>
+            <a className='item' href='/document'>
+              文档
+            </a>
+            <a className='item' href=''>
+              文章
+            </a>
+            <a className='item' href=''>
+              自由分类
+            </a>
+          </div>
+        </div>
+        <Search />
+        <div className='right menu'>
+          <div className='ui right dropdown icon item'>
+            <i className='plus icon'/>
             <div className='menu'>
-              <div className='item' onClick={() => gotoDocumentIndex()}>
-                文档
-              </div>
-              <div className='item'>
+              <a className='item' href='/document/add'>
+                <i className='book icon'/>
+                文档项目
+              </a>
+              <a className='item' href=''>
+                <i className='file text outline icon'/>
                 文章
-              </div>
-              <div className='item'>
-                自由分类
-              </div>
+              </a>
+              <a className='item' href=''>
+                <i className='sitemap icon'/>
+                分类
+              </a>
+              <a className='item' href=''>
+                <i className='share alternate icon'/>
+                结点
+              </a>
+              <div className='divider'></div>
+              <a className='item' href='/team/add'>
+                <i className='users icon'/>
+                团队
+              </a>
             </div>
           </div>
-          <Search />
-          <div className='right menu'>
-            <div className='ui right dropdown icon item'>
-              <i className='plus icon'/>
-              <div className='menu'>
-                <div className='item' onClick={() => gotoDocumentAdd()}>
-                  <i className='book icon'/>
-                  文档项目
-                </div>
-                <div className='item'>
-                  <i className='file text outline icon'/>
-                  文章
-                </div>
-                <div className='item'>
-                  <i className='sitemap icon'/>
-                  分类
-                </div>
-                <div className='item'>
-                  <i className='share alternate icon'/>
-                  结点
-                </div>
-                <div className='divider'></div>
-                <div className='item' onClick={() => gotoTeamAdd()}>
-                  <i className='users icon'/>
-                  团队
-                </div>
-              </div>
-            </div>
-            {userItem}
-          </div>
+          {userItem}
         </div>
       </div>
     );

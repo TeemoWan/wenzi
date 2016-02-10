@@ -2,14 +2,10 @@ import React from 'react';
 
 const Team = React.createClass({
   render() {
-    const {team, loading} = this.props;
+    const {team} = this.props;
 
     return (
-      <div className='ui main container' id='content'>
-        {loading ?
-          <div className='ui active medium centered loader'></div> :
-          <span>{team.name}</span>}
-      </div>
+      <div id='team'>{team.name}</div>
     );
   }
 });

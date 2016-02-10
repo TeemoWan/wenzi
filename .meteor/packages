@@ -22,3 +22,5 @@ kadira:flow-router
 alanning:roles
 semantic:ui
 flemay:less-autoprefixer
+dburles:collection-helpers
+stylus

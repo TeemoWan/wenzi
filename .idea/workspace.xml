@@ -1,20 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2004905e-d671-4627-85c8-48a40e98b423" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.eslintrc" afterPath="$PROJECT_DIR$/.eslintrc" />
+    <list default="true" id="2004905e-d671-4627-85c8-48a40e98b423" name="Default" comment="eslint,修改格式">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentAdd/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentEdit/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentEdit/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentEditEditor/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentEditEditor/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentEditTree/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentEditTree/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentEditTreeNode/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentEditTreeNode/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentHeader/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentHeader/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentIndex/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentStructure/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/DocumentStructure/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/FluidLayout/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/FluidLayout/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/Home/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/Loading/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/NotFound/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/Team/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/TeamAdd/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/User/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/containers/documentEdit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/containers/documentEditEditor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/containers/documentEditTree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/containers/documentEditTreeNode.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/containers/documentHeader.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/actions/layout.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/components/ForgotPassword/style.css" afterPath="$PROJECT_DIR$/client/components/ForgotPassword/style.styl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/components/Login/style.css" afterPath="$PROJECT_DIR$/client/components/Login/style.styl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/components/MainLayout/style.css" afterPath="$PROJECT_DIR$/client/components/MainLayout/style.styl" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/components/Register/style.css" afterPath="$PROJECT_DIR$/client/components/Register/style.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/actions/layout.js" afterPath="$PROJECT_DIR$/client/actions/layout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/release" afterPath="$PROJECT_DIR$/.meteor/release" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/actions/documents.js" afterPath="$PROJECT_DIR$/client/actions/documents.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/actions/index.js" afterPath="$PROJECT_DIR$/client/actions/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Document/index.jsx" afterPath="$PROJECT_DIR$/client/components/Document/index.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/DocumentAdd/index.jsx" afterPath="$PROJECT_DIR$/client/components/DocumentAdd/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/DocumentIndex/index.jsx" afterPath="$PROJECT_DIR$/client/components/DocumentIndex/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/ForgotPassword/index.jsx" afterPath="$PROJECT_DIR$/client/components/ForgotPassword/index.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Header/index.jsx" afterPath="$PROJECT_DIR$/client/components/Header/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Home/index.jsx" afterPath="$PROJECT_DIR$/client/components/Home/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Login/index.jsx" afterPath="$PROJECT_DIR$/client/components/Login/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/MainLayout/index.jsx" afterPath="$PROJECT_DIR$/client/components/MainLayout/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/NotFound/index.jsx" afterPath="$PROJECT_DIR$/client/components/NotFound/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Register/index.jsx" afterPath="$PROJECT_DIR$/client/components/Register/index.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Team/index.jsx" afterPath="$PROJECT_DIR$/client/components/Team/index.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/collections/branch.js" afterPath="$PROJECT_DIR$/libs/collections/branch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/collections/commit.js" afterPath="$PROJECT_DIR$/libs/collections/commit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/collections/document.js" afterPath="$PROJECT_DIR$/libs/collections/document.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/collections/node.js" afterPath="$PROJECT_DIR$/libs/collections/node.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/collections/team.js" afterPath="$PROJECT_DIR$/libs/collections/team.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/collections/user.js" afterPath="$PROJECT_DIR$/libs/collections/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/collections/validationMessage.js" afterPath="$PROJECT_DIR$/libs/collections/validationMessage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/TeamAdd/index.jsx" afterPath="$PROJECT_DIR$/client/components/TeamAdd/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/User/index.jsx" afterPath="$PROJECT_DIR$/client/components/User/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/configs/routes.jsx" afterPath="$PROJECT_DIR$/client/configs/routes.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/containers/document.js" afterPath="$PROJECT_DIR$/client/containers/document.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/containers/documentAdd.js" afterPath="$PROJECT_DIR$/client/containers/documentAdd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/containers/documentIndex.js" afterPath="$PROJECT_DIR$/client/containers/documentIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/containers/forgotPassword.js" afterPath="$PROJECT_DIR$/client/containers/forgotPassword.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/containers/header.js" afterPath="$PROJECT_DIR$/client/containers/header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/containers/login.js" afterPath="$PROJECT_DIR$/client/containers/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/containers/register.js" afterPath="$PROJECT_DIR$/client/containers/register.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/containers/team.js" afterPath="$PROJECT_DIR$/client/containers/team.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/containers/teamAdd.js" afterPath="$PROJECT_DIR$/client/containers/teamAdd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/containers/user.js" afterPath="$PROJECT_DIR$/client/containers/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/publications/documents.js" afterPath="$PROJECT_DIR$/server/publications/documents.js" />
     </list>
     <ignored path="wenzi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,13 +87,116 @@
     <favorites_list name="wenzi" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="documentEditTreeNode.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/containers/documentEditTreeNode.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/components/DocumentEditTreeNode/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.18311292">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/DocumentEditTree/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/actions/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="documentEditTree.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/containers/documentEditTree.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="documentHeader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/containers/documentHeader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="documents.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/actions/documents.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="documentEdit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/containers/documentEdit.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.styl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/DocumentEditTreeNode/style.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.411765">
+              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+              <folding>
+                <marker date="1455131998000" expanded="true" signature="32:679" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="documentEditEditor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/containers/documentEditEditor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -50,57 +206,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/libs/collections/index.js" />
-        <option value="$PROJECT_DIR$/server/methods/auth.js" />
-        <option value="$PROJECT_DIR$/client/containers/documentAdd.js" />
-        <option value="$PROJECT_DIR$/client/containers/documentIndex.js" />
-        <option value="$PROJECT_DIR$/client/actions/documents.js" />
-        <option value="$PROJECT_DIR$/client/components/AuthLayout/index.jsx" />
-        <option value="$PROJECT_DIR$/client/components/Document/index.jsx" />
-        <option value="$PROJECT_DIR$/client/configs/routes.jsx" />
+        <option value="$PROJECT_DIR$/client/components/DocumentHeader/index.jsx" />
         <option value="$PROJECT_DIR$/client/containers/document.js" />
-        <option value="$PROJECT_DIR$/client/components/User/index.jsx" />
-        <option value="$PROJECT_DIR$/client/components/Search/index.jsx" />
-        <option value="$PROJECT_DIR$/client/components/NotFound/index.jsx" />
-        <option value="$PROJECT_DIR$/client/components/TeamAdd/index.jsx" />
-        <option value="$PROJECT_DIR$/client/components/Home/index.jsx" />
-        <option value="$PROJECT_DIR$/client/components/Login/index.jsx" />
-        <option value="$PROJECT_DIR$/client/components/Register/index.jsx" />
+        <option value="$PROJECT_DIR$/libs/collections/index.js" />
+        <option value="$PROJECT_DIR$/client/configs/routes.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/fluidLayout.js" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditList/style.css" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditListChpater/style.css" />
+        <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.scripts/mocha_runner.js" />
+        <option value="$PROJECT_DIR$/client/components/Document/index.jsx" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditListChpater/index.jsx" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/client/components/MainLayout/tests/index.js" />
-        <option value="$PROJECT_DIR$/client/actions/auth.js" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditListSection/style.css" />
+        <option value="$PROJECT_DIR$/client/components/DocumentAdd/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEdit/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditEditor/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditList/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditListChpater/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditListSection/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentHeader/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentIndex/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentStructure/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/FluidLayout/style.styl" />
         <option value="$PROJECT_DIR$/client/components/ForgotPassword/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/Home/style.css" />
+        <option value="$PROJECT_DIR$/client/components/Home/style.styl" />
         <option value="$PROJECT_DIR$/client/components/Login/style.styl" />
-        <option value="$PROJECT_DIR$/client/components/ForgotPassword/style.css" />
         <option value="$PROJECT_DIR$/client/components/MainLayout/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/NotFound/style.styl" />
         <option value="$PROJECT_DIR$/client/components/Register/style.styl" />
-        <option value="$PROJECT_DIR$/client/components/MainLayout/style.css" />
-        <option value="$PROJECT_DIR$/client/components/DocumentIndex/index.jsx" />
-        <option value="$PROJECT_DIR$/client/components/ForgotPassword/index.jsx" />
-        <option value="$PROJECT_DIR$/client/actions/index.js" />
-        <option value="$PROJECT_DIR$/client/containers/header.js" />
-        <option value="$PROJECT_DIR$/client/configs/context.js" />
-        <option value="$PROJECT_DIR$/client/configs/method_stubs/documents.js" />
-        <option value="$PROJECT_DIR$/server/methods/documents.js" />
-        <option value="$PROJECT_DIR$/server/methods/teams.js" />
-        <option value="$PROJECT_DIR$/server/methods/users.js" />
-        <option value="$PROJECT_DIR$/server/publications/documents.js" />
-        <option value="$PROJECT_DIR$/server/publications/teams.js" />
-        <option value="$PROJECT_DIR$/server/publications/users.js" />
-        <option value="$PROJECT_DIR$/client/components/Team/index.jsx" />
-        <option value="$PROJECT_DIR$/client/actions/layout.js" />
-        <option value="$PROJECT_DIR$/libs/collections/validationMessage.js" />
-        <option value="$PROJECT_DIR$/libs/collections/user.js" />
-        <option value="$PROJECT_DIR$/libs/collections/branch.js" />
-        <option value="$PROJECT_DIR$/libs/collections/document.js" />
-        <option value="$PROJECT_DIR$/libs/collections/node.js" />
-        <option value="$PROJECT_DIR$/libs/collections/team.js" />
-        <option value="$PROJECT_DIR$/libs/collections/commit.js" />
-        <option value="$PROJECT_DIR$/client/components/Header/index.jsx" />
-        <option value="$PROJECT_DIR$/client/components/DocumentAdd/index.jsx" />
-        <option value="$PROJECT_DIR$/.eslintrc" />
+        <option value="$PROJECT_DIR$/client/components/Team/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/TeamAdd/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/User/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditListSection/index.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/documentEditListSection.js" />
+        <option value="$PROJECT_DIR$/client/containers/documentEditListChapter.js" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditListItem/style.styl" />
+        <option value="$PROJECT_DIR$/client/containers/documentEditListItem.js" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditList/index.jsx" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditListItem/index.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/documentEditList.js" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditTree/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEdit/index.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/login.js" />
+        <option value="$PROJECT_DIR$/client/containers/documentEditTree.js" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditTree/index.jsx" />
+        <option value="$PROJECT_DIR$/client/containers/documentEdit.js" />
+        <option value="$PROJECT_DIR$/client/actions/documents.js" />
+        <option value="$PROJECT_DIR$/client/containers/documentEditTreeNode.js" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditTreeNode/style.styl" />
+        <option value="$PROJECT_DIR$/client/components/DocumentEditTreeNode/index.jsx" />
       </list>
     </option>
   </component>
@@ -114,9 +270,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1427" />
-    <option name="height" value="1413" />
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -143,6 +298,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -165,19 +332,227 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publications" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="containers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Register" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DocumentEditTreeNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DocumentEditTree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DocumentEdit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wenzi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-        <subPane subId="Tests" />
       </pane>
       <pane id="Scratches">
         <subPane />
@@ -191,7 +566,7 @@
     <property name="js.meteor.project" value="true" />
     <property name="js.meteor.library.was.enabled" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="settings.bitbucket" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Stylus" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
@@ -213,14 +588,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="905" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="javascript.nodejs.core.library.configured.version" value="5.0.0" />
+    <property name="SearchEverywhereHistoryKey" value="react&#9;null&#9;null" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server/publications" />
+      <recent name="$PROJECT_DIR$/client/components/Team" />
       <recent name="$PROJECT_DIR$/client/containers" />
-      <recent name="$PROJECT_DIR$/client/components/TeamAdd" />
-      <recent name="$PROJECT_DIR$/client/components/TeamHome" />
-      <recent name="$PROJECT_DIR$/client/components/DocumentAdd" />
+      <recent name="$PROJECT_DIR$/client/components/DocumentEditList" />
+      <recent name="$PROJECT_DIR$/client/components/DocumentEditEditor" />
+      <recent name="$PROJECT_DIR$/client/components/DocumentEdit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/containers" />
@@ -393,7 +770,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453736991143</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="eslint,修改格式">
+      <created>1453745017575</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1453745017575</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -425,27 +808,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1427" height="1413" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24679942" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11736904" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22213967" sideWeight="0.24433658" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45328185" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3992278" sideWeight="0.75566345" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22213967" sideWeight="0.24433658" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16493313" sideWeight="0.75566345" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980111" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44787645" sideWeight="0.8424821" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24888559" sideWeight="0.8424821" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="123" width="1078" height="1213" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4435364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -467,7 +850,8 @@
     <MESSAGE value="修改id长度,24位" />
     <MESSAGE value="对于需要登录,或者已经登录的某些页面进行跳转." />
     <MESSAGE value="使用mocha,chai构建测试环境,enlint代码,优化组件,将和环境相关的操作移到actions中,组件只需要根据this.props传进来值来决定" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用mocha,chai构建测试环境,enlint代码,优化组件,将和环境相关的操作移到actions中,组件只需要根据this.props传进来值来决定" />
+    <MESSAGE value="eslint,修改格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="eslint,修改格式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -493,127 +877,237 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/components/Home/index.jsx">
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentAdd/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentEditEditor/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentHeader/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentIndex/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentStructure/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/FluidLayout/style.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/ForgotPassword/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Home/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Login/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/MainLayout/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/NotFound/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Register/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/Register/index.jsx">
+    <entry file="file://$PROJECT_DIR$/client/components/Team/style.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
-          <folding />
+        <state vertical-scroll-proportion="-1.875">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/actions/documents.js">
+    <entry file="file://$PROJECT_DIR$/client/components/TeamAdd/style.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-0.88235295">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.meteor/versions">
+    <entry file="file://$PROJECT_DIR$/client/components/User/style.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6959385">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.meteor/release">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.scripts/mocha_runner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/MainLayout/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.09825327">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/Login/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="88" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/Login/style.css">
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentEditEditor/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentEdit/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Register/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3253638">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react/lib/findDOMNode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react/lib/flattenChildren.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react/lib/forEachAccumulated.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react/lib/ReactMount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.16983">
+          <caret line="389" column="12" selection-start-line="389" selection-start-column="12" selection-end-line="389" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05263158">
+          <caret line="71" column="22" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.scripts/mocha_runner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentEditTree/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11653718">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react/lib/update.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1453732501000" expanded="true" signature="21:118" placeholder="{...}" />
-            <marker date="1453732501000" expanded="true" signature="148:167" placeholder="{...}" />
-            <marker date="1453732501000" expanded="true" signature="197:220" placeholder="{...}" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/ForgotPassword/style.css">
+    <entry file="file://$PROJECT_DIR$/client/containers/documentAdd.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/Register/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/MainLayout/style.css">
+    <entry file="file://$PROJECT_DIR$/client/containers/teamAdd.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/DocumentIndex/index.jsx">
+    <entry file="file://$PROJECT_DIR$/client/containers/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/configs/routes.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/containers/header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/containers/forgotPassword.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -625,10 +1119,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/actions/teams.js">
+    <entry file="file://$PROJECT_DIR$/client/actions/auth.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/containers/document.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Document/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentEdit/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/containers/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/containers/team.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/containers/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/containers/documentHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -636,116 +1181,28 @@
     <entry file="file://$PROJECT_DIR$/client/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/configs/method_stubs/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/index.js">
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentEditTree/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/configs/method_stubs/documents.js">
+    <entry file="file://$PROJECT_DIR$/client/containers/documentEditTree.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/methods/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/methods/documents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/methods/teams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/methods/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/publications/documents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/publications/teams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/publications/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/AuthLayout/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/Document/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3642857">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/actions/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.48">
-          <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/Footer/index.jsx">
+    <entry file="file://$PROJECT_DIR$/client/containers/documentEditEditor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -753,157 +1210,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5517242">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/configs/context.js">
+    <entry file="file://$PROJECT_DIR$/client/containers/documentEdit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="37" />
+          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/Team/index.jsx">
+    <entry file="file://$PROJECT_DIR$/client/actions/documents.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/validationMessage.js">
+    <entry file="file://$PROJECT_DIR$/client/containers/documentEditTreeNode.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/branch.js">
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentEditTreeNode/style.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="-9.411765">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <marker date="1455131998000" expanded="true" signature="32:679" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/document.js">
+    <entry file="file://$PROJECT_DIR$/client/components/DocumentEditTreeNode/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/node.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/team.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/collections/commit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6768559">
-          <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/ForgotPassword/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5895197">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6561086">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.meteor/packages">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.111111">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/Header/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/DocumentAdd/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/actions/layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/MainLayout/tests/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.393665">
-          <caret line="67" column="67" selection-start-line="67" selection-start-column="67" selection-end-line="67" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.18311292">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
           <folding />
         </state>
       </provider>
