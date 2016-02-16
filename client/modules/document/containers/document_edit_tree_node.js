@@ -12,6 +12,7 @@ const Types = {
 const nodeSource = {
   beginDrag(props, monitor, component) {
     return {
+      id: props.id,
       type: props.type,
       index: props.index
     };
@@ -20,21 +21,28 @@ const nodeSource = {
 
 const nodeTarget = {
   hover(props, monitor, component) {
-    const dragIndex = monitor.getItem().index;
+    const dragId = monitor.getItem().id;
     const dragType = monitor.getItem().type;
+    const hoverId = props.id;
     const hoverIndex = props.index;
     const hoverType = props.type;
-    let updatedIndex;
+    const moveNode = props.moveNode;
+    let type;
+    let direction;
 
-    //console.log(`拖拽索引:${dragIndex}, 悬浮索引:${hoverIndex}`);
-
-    // 不替换结点自己
-    if (dragIndex === hoverIndex) {
+    // 拖拽Id和悬浮Id相等的情况:如从下往上拖拽一章越过另一章,在自己的阴影之上,这时只能通过id来判断
+    if (dragId === hoverId) {
       return;
     }
 
-    // 章在节之上
-    if (dragType === 'chapter' && hoverType === 'section') {
+    // 拖拽类型
+    if (dragType === 'chapter' && dragType === hoverType) {
+      type = 1;
+    } else if (dragType === 'section' && dragType === hoverType) {
+      type = 2;
+    } else if (dragType === 'section' && hoverType === 'chapter') {
+      type = 3;
+    } else {
       return;
     }
 
@@ -50,53 +58,14 @@ const nodeTarget = {
     // 取得光标到悬浮章的顶部距离
     const hoverClientY = clientOffset.y - hoverBoundingRect.top;
 
-    // 章在章之上 或者 节在节之上
-    if (dragType === hoverType) {
-      //console.log(`光标:${clientOffset.y}, 光标距离悬浮顶部:${hoverClientY}, 悬浮顶部:${hoverBoundingRect.top}, 悬浮底部:${hoverBoundingRect.bottom}, 悬浮中值:${hoverMiddleY}`);
-      // 向下拖拽
-      if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
-        return;
-      }
-
-      // 向上拖拽
-      if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
-        return;
-      }
-
-      //调用移动结点,相当于改变结点顺序
-      updatedIndex = props.moveNode(dragIndex, hoverIndex);
-
-      // Note: we're mutating the monitor item here! Generally it's better to avoid mutations, but it's good here for the sake of performance to avoid expensive index searches.
-      monitor.getItem().index = updatedIndex;
-      return;
+    // 在目标的位置, 0为在目标上半部, 1为在目标下半部
+    if (hoverClientY < hoverMiddleY) {
+      direction = 0;
+    } else {
+      direction = 1;
     }
 
-    // 节在章之上, 这里不用if,因为不再有else
-    // 在章内移动节不处理
-    if (_.startsWith(dragIndex, hoverIndex)) {
-      return;
-    }
-
-    // 向下拖拽
-    if (dragIndex < hoverIndex) {
-      if (hoverClientY > hoverMiddleY) {
-        return;
-      }
-
-      updatedIndex = props.moveNode(dragIndex, hoverIndex, 0);
-      monitor.getItem().index = updatedIndex;
-      return;
-    }
-
-    // 向上拖拽
-    if (dragIndex > hoverIndex) {
-      if (hoverClientY < hoverMiddleY) {
-        return;
-      }
-
-      updatedIndex = props.moveNode(dragIndex, hoverIndex, 1);
-      monitor.getItem().index = updatedIndex;
-    }
+    return moveNode(dragId, hoverIndex, type, direction);
   }
 };
 

@@ -1,6 +1,17 @@
 import update from 'react/lib/update';
 import _ from 'lodash';
 
+const generateEditTreeRouter = (tree, path='') => {
+  let routes = {};
+
+  _.map(tree.children, (child, n)=>{
+    routes[child._id] = `${path}.${n}`;
+    return _.assign(routes, generateEditTreeRouter(child, routes[child._id]));
+  });
+
+  return routes;
+};
+
 export default {
   documentAdd({Meteor, LocalState, FlowRouter}, ownerType, ownerId, name, summary) {
     if (name === '') {
@@ -28,22 +39,28 @@ export default {
 
   initDocumentEditTree({LocalState}, tree) {
     LocalState.set('DOCUMENT_EDIT_TREE', tree);
+    LocalState.set('DOCUMENT_EDIT_TREE_ROUTER', generateEditTreeRouter(tree));
   },
 
   clearDocumentEditTree({LocalState}) {
     LocalState.set('DOCUMENT_EDIT_TREE', null);
+    LocalState.set('DOCUMENT_EDIT_TREE_ROUTER', null);
   },
 
-  // direction为节放入章时的方向,0为从上方拖入,1为从下方拖入
-  moveNode({LocalState}, dragIndex, hoverIndex, direction=0) {
-    //console.log(`moveNode():[${dragIndex}]->[${hoverIndex}]`);
-
+  // type为拖拽类型, 0为章到章, 1为节到节, 2为节到章
+  // direction为光标在对象位置, 0为光标在对象的上半边, 1为光标在对象的下半边
+  moveNode({LocalState}, dragId, hoverIndex, type, direction=0) {
     let newTree;
-    let updatedIndex;
+
+    // 取得结点索引
+    const getIndex = (id) => {
+      let routes = LocalState.get('DOCUMENT_EDIT_TREE_ROUTER');
+      return routes[id];
+    };
 
     // 取得结点路径
-    const getNodePath = (index) => {
-      const trimIndex = index.slice(3);
+    const getPath = (index) => {
+      const trimIndex = index.slice(1);
 
       if (trimIndex.length == 1) {
         return `children[${trimIndex}]`;
@@ -57,41 +74,52 @@ export default {
 
     // 取得结点
     let tree = LocalState.get('DOCUMENT_EDIT_TREE');
-    const dragNodePath = getNodePath(dragIndex);
-    const hoverNodePath = getNodePath(hoverIndex);
-    const [dragNode, hoverNode] = _.at(tree, [dragNodePath, hoverNodePath]);
+    const dragIndex = getIndex(dragId);
+    const drapPath = getPath(dragIndex);
+    const [dragNode] = _.at(tree, [drapPath]);
+
+    // 这种情况出现在,从上往下拖拽,跨过至少1个章,拖拽开始索引小于悬浮索引,在悬浮章下部时,会将拖拽章移动到悬浮章
+    // 的下边,但由于拖拽章的高度比较窄而悬浮章的高度比较高,移动后鼠标仍然在悬浮章的下部(实际上拖住章已经移动到
+    // 悬浮章的下边了),此时通过拖拽开始索引和悬浮章移动以后的索引比较,仍然会调用moveNode函数,所以,此处需要通过
+    // 移动以后的索引值再次判断.
+    if (type == 1 || type ==2) {
+      if (direction == 0 && dragIndex < hoverIndex) {
+        return;
+      }
+
+      if (direction == 1 && dragIndex > hoverIndex) {
+        return;
+      }
+    }
 
     // 章到章
-    if (dragNode.type === 'chapter' && hoverNode.type === 'chapter') {
-      let dragNodeIndex = dragIndex.slice(3);
-      let hoverNodeIndex = hoverIndex.slice(3);
-
+    if (type == 1) {
+      const dragIndexes = _.trimStart(dragIndex, '.');
+      const hoverIndexes = _.trimStart(hoverIndex, '.');
       newTree = update(tree, {
         children: {
           $splice: [
-            [parseInt(dragNodeIndex), 1],
-            [parseInt(hoverNodeIndex), 0, dragNode]
+            [parseInt(dragIndexes), 1],
+            [parseInt(hoverIndexes), 0, dragNode]
           ]
         }
       });
-
-      updatedIndex = hoverIndex;
     }
 
     // 节到节
-    if (dragNode.type === 'section' && hoverNode.type === 'section') {
-      let dragNodeIndex = dragIndex.slice(3).split('.');
-      let hoverNodeIndex = hoverIndex.slice(3).split('.');
+    if (type == 2) {
+      const dragIndexes = _.trimStart(dragIndex, '.').split('.');
+      const hoverIndexes = _.trimStart(hoverIndex, '.').split('.');
 
       // 在同一章内
-      if (dragNodeIndex[0] === hoverNodeIndex[0]) {
+      if (dragIndexes[0] === hoverIndexes[0]) {
         newTree = update(tree, {
           children: {
-            [parseInt(dragNodeIndex[0])]: {
+            [parseInt(dragIndexes[0])]: {
               children: {
                 $splice: [
-                  [parseInt(dragNodeIndex[1]), 1],
-                  [parseInt(hoverNodeIndex[1]), 0, dragNode]
+                  [parseInt(dragIndexes[1]), 1],
+                  [parseInt(hoverIndexes[1]), 0, dragNode]
                 ]
               }
             }
@@ -100,44 +128,50 @@ export default {
       } else {
         newTree = update(tree, {
           children: {
-            [parseInt(dragNodeIndex[0])]: {
+            [parseInt(dragIndexes[0])]: {
               children: {
                 $splice: [
-                  [parseInt(dragNodeIndex[1]), 1]
+                  [parseInt(dragIndexes[1]), 1]
                 ]
               }
             },
-            [parseInt(hoverNodeIndex[0])]: {
+            [parseInt(dragIndexes[0])]: {
               children: {
                 $splice: [
-                  [parseInt(hoverNodeIndex[1]), 0, dragNode]
+                  [parseInt(hoverIndexes[1]), 0, dragNode]
                 ]
               }
             }
           }
         });
       }
-
-      updatedIndex = hoverIndex;
     }
 
     // 节到章
-    if (dragNode.type === 'section' && hoverNode.type === 'chapter') {
-      let dragNodeIndex = dragIndex.slice(3).split('.');
-      let hoverNodeIndex = hoverIndex.slice(3);
+    if (type == 3) {
+      const hoverPath = getPath(hoverIndex);
+      const [hoverNode] = _.at(tree, [hoverPath]);
+      const hoverChildrenLength = hoverNode.children.length;
+      const dragIndexes = _.trimStart(dragIndex, '.').split('.');
+      const hoverIndexes = _.trimStart(hoverIndex, '.');
+
+      // 节背影在目标章中
+      if (_.startsWith(dragIndex, hoverIndex)) {
+        return;
+      }
 
       // 上方拖入
       if (direction == 0) {
         newTree = update(tree, {
           children: {
-            [parseInt(dragNodeIndex[0])]: {
+            [parseInt(dragIndexes[0])]: {
               children: {
                 $splice: [
-                  [parseInt(dragNodeIndex[1]), 1]
+                  [parseInt(dragIndexes[1]), 1]
                 ]
               }
             },
-            [parseInt(hoverNodeIndex)]: {
+            [parseInt(hoverIndexes)]: {
               children: {
                 $splice: [
                   [0, 0, dragNode]
@@ -146,34 +180,29 @@ export default {
             }
           }
         });
-        updatedIndex = `${hoverIndex}.0`;
       } else {
-        const lastIndex = hoverNode.children ? hoverNode.children.length : 0;
         newTree = update(tree, {
           children: {
-            [parseInt(dragNodeIndex[0])]: {
+            [parseInt(dragIndexes[0])]: {
               children: {
                 $splice: [
-                  [parseInt(dragNodeIndex[1]), 1]
+                  [parseInt(dragIndexes[1]), 1]
                 ]
               }
             },
-            [parseInt(hoverNodeIndex)]: {
+            [parseInt(hoverIndexes)]: {
               children: {
                 $splice: [
-                  [lastIndex, 0, dragNode]
+                  [hoverChildrenLength, 0, dragNode]
                 ]
               }
             }
           }
         });
-
-        updatedIndex = `${hoverIndex}.${lastIndex}`;
       }
     }
 
+    LocalState.set('DOCUMENT_EDIT_TREE_ROUTER', generateEditTreeRouter(newTree));
     LocalState.set('DOCUMENT_EDIT_TREE', newTree);
-
-    return updatedIndex;
   }
 };

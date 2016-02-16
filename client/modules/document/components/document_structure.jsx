@@ -14,7 +14,7 @@ const DocumentStructure = React.createClass({
         trs.push(<tr key={node.id}>
           <td className={classNames('six', 'wide', {section: node.type === 'section'})}>
             <i className={classNames('icon', {
-              folder: node.type === 'chapter',
+              file: node.type === 'chapter',
               'file outline': node.type === 'section'})}/>
             <a href=''>{node.title}</a>
           </td>

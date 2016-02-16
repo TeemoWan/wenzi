@@ -32,7 +32,10 @@
       width: 100%;
     &.dragging
       background-color: #c4c9cc;
-      cursor: grabbing;
+      > .icon
+        opacity: 0;
+      > .content
+        opacity: 0;
 
   .section
     padding: 6px 6px 6px 8px;
@@ -47,9 +50,9 @@
     &.dragging
       background-color: #c4c9cc;
       .icon
-        color: #c4c9cc;
+        opacity: 0;
       .header
-        color: #c4c9cc;
+        opacity: 0;
 
 #doc-header
   padding-top: 30px;

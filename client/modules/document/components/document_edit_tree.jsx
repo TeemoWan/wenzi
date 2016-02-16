@@ -20,11 +20,11 @@ const DocumentEditTree = React.createClass({
     );
   },
 
-  chapterTree(tree, index = '.0') {
+  chapterTree(tree, index='') {
     const {moveNode} = this.props;
     return (
       tree.children && tree.children.map((child, i) => {
-        return (<DocumentEditTreeNode index={`${index}.${i}`} key={child._id} type={child.type} item={child} moveNode={moveNode}>
+        return (<DocumentEditTreeNode index={`${index}.${i}`} id={child._id} key={child._id} type={child.type} item={child} moveNode={moveNode}>
                  {this.chapterTree(child, `${index}.${i}`)}
                 </DocumentEditTreeNode>);
       })
