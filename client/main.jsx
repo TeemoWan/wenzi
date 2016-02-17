@@ -3,10 +3,11 @@ import initContext from './configs/context';
 
 // modules
 import coreModule from './modules/core';
-import authModule from './modules/auth';
-import documentModule from './modules/document';
-import teamModule from './modules/team';
 import userModule from './modules/user';
+import authModule from './modules/auth';
+import teamModule from './modules/team';
+import documentModule from './modules/document';
+import searchModule from './modules/search';
 
 // init context
 const context = initContext();
@@ -14,8 +15,9 @@ const context = initContext();
 // create app
 const app = createApp(context);
 app.loadModule(coreModule);
-app.loadModule(authModule);
-app.loadModule(documentModule);
-app.loadModule(teamModule);
 app.loadModule(userModule);
+app.loadModule(authModule);
+app.loadModule(teamModule);
+app.loadModule(documentModule);
+app.loadModule(searchModule);
 app.init();

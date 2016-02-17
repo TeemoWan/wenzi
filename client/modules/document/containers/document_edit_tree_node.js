@@ -13,8 +13,7 @@ const nodeSource = {
   beginDrag(props, monitor, component) {
     return {
       id: props.id,
-      type: props.type,
-      index: props.index
+      type: props.type
     };
   }
 };
@@ -30,7 +29,7 @@ const nodeTarget = {
     let type;
     let direction;
 
-    // 拖拽Id和悬浮Id相等的情况:如从下往上拖拽一章越过另一章,在自己的阴影之上,这时只能通过id来判断
+    // 拖拽结点在阴影结点之上时
     if (dragId === hoverId) {
       return;
     }

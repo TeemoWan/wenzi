@@ -25,6 +25,30 @@
 #footer
   flex: none; /* 2 */
 
+#header.ui.item.menu
+  border-bottom: 1px solid rgba(51, 51, 51, 0.15);
+  box-shadow: none;
+  .item:first-child
+    justify-content: flex-start;
+  .item:last-child
+    justify-content: flex-end;
+  .logo
+    margin: 0 auto;
+    width: 35px;
+
+#header-menu-button
+  margin: 0 10px;
+
+#header-user-button,
+#header-alarm-button,
+#header-add-button
+  margin-right: 10px;
+
+#header-user-button
+  .ui.avatar.image
+    height: 34px;
+    width: 34px;
+
 #content
   flex: 1 0 auto; /* 2 */
 
@@ -40,3 +64,6 @@
   display: block;
   width: 100%;
   height: 100%;
+
+.ui.popup
+  box-shadow: none;

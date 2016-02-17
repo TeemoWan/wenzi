@@ -16,6 +16,7 @@ import Document from '/client/modules/document/containers/document';
 import DocumentIndex from '/client/modules/document/containers/document_index';
 import DocumentAdd from '/client/modules/document/containers/document_add';
 import DocumentEdit from '/client/modules/document/containers/document_edit';
+import Search from '/client/modules/search/containers/search';
 
 export default function (injectDeps, {FlowRouter, Meteor}) {
   const LayoutMainCtx = injectDeps(LayoutMain);
@@ -135,6 +136,15 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     action: ({id}) => {
       mount(LayoutFluidCtx, {
         content: () => (<DocumentEdit documentId={id}/>)
+      });
+    }
+  });
+
+  FlowRouter.route('/search', {
+    name: 'search',
+    action: () => {
+      mount(LayoutMainCtx, {
+        content: () => (<Search />)
       });
     }
   });
