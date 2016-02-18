@@ -10,11 +10,9 @@ const Header = React.createClass({
       .popup({
         popup: '#header-menu-popup',
         position: 'bottom left',
-        distanceAway: 15,
-        offset: 10,
+        distanceAway: 8,
         on: 'click',
-        hoverable: true,
-        closable: false
+        hoverable: true
       });
 
     $('#header-add-button')
@@ -23,8 +21,7 @@ const Header = React.createClass({
         position: 'bottom right',
         distanceAway: 9,
         on: 'click',
-        hoverable: true,
-        closable: false
+        hoverable: true
       });
 
     $('#header-user-button')
@@ -42,15 +39,16 @@ const Header = React.createClass({
       .popup({
         popup: '#header-menu-popup',
         position: 'bottom left',
+        distanceAway: 8,
         on: 'click',
-        hoverable: true,
-        closable: false
+        hoverable: true
       });
 
     $('#header-add-button')
       .popup({
         popup: '#header-add-popup',
         position: 'bottom right',
+        distanceAway: 9,
         on: 'click',
         hoverable: true
       });
@@ -59,6 +57,7 @@ const Header = React.createClass({
       .popup({
         popup: '#header-user-popup',
         position: 'bottom right',
+        distanceAway: 16,
         on: 'click',
         hoverable: true
       });
@@ -68,7 +67,7 @@ const Header = React.createClass({
     let {user, logout} = this.props;
 
     return (
-      <div className='ui fixed borderless three item secondary menu' id='header'>
+      <div className='ui fixed borderless secondary menu' id='header'>
         <div className='item'>
           <button className='ui circular icon button' id='header-menu-button'>
             <i className='sidebar icon'/>

@@ -25,27 +25,42 @@
 #footer
   flex: none; /* 2 */
 
-#header.ui.item.menu
+.ui.menu#header
+  background: #FFFFFF;
   border-bottom: 1px solid rgba(51, 51, 51, 0.15);
   box-shadow: none;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  .item
+    display: block;
+    flex: auto;
   .item:first-child
+    display: flex;
     justify-content: flex-start;
+    max-width: 150px;
+    flex: none;
   .item:last-child
+    display: flex;
     justify-content: flex-end;
+    max-width: 250px;
+    flex: none;
   .logo
     margin: 0 auto;
     width: 35px;
+    img
+      width: 35px;
+      height: 35px;
 
 #header-menu-button
-  margin: 0 10px;
+  margin-right: 0.928571em;
 
-#header-user-button,
 #header-alarm-button,
 #header-add-button
-  margin-right: 10px;
+  margin-right: 0.928571em;
 
 #header-user-button
   .ui.avatar.image
+    margin-right: 0;
     height: 34px;
     width: 34px;
 
