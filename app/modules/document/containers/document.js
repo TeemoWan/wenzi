@@ -1,4 +1,5 @@
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
+import {DocHead} from 'meteor/kadira:dochead';
 import Loading from '/app/modules/core/components/loading.jsx';
 import Document from '../components/document.jsx';
 
@@ -73,6 +74,21 @@ const composer = ({Meteor, Collections, documentId}, onData) => {
     };
 
     onData(null, {document, owner, tree});
+
+    // SEO
+    if (ownerType === 'user') {
+      DocHead.setTitle(`${owner.username} / ${document.name}`);
+    } else {
+      DocHead.setTitle(`${owner.username} / ${document.name}`);
+    }
+
+    DocHead.addMeta({
+      name: 'description', content: document.summary
+    });
+
+    DocHead.addMeta({
+      name: 'Keywords', content: document.summary
+    });
   }
 };
 

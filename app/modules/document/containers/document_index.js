@@ -1,4 +1,5 @@
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
+import {DocHead} from 'meteor/kadira:dochead';
 import Loading from '/app/modules/core/components/loading.jsx';
 import DocumentIndex from '../components/document_index.jsx';
 
@@ -15,6 +16,12 @@ const composer = ({Meteor, Collections}, onData) => {
     });
 
     onData(null, {documents});
+
+    // SEO
+    DocHead.setTitle('文字工匠 文档');
+    DocHead.addMeta({
+      name: 'description', content: '文字工匠 文档'
+    });
   }
 };
 
