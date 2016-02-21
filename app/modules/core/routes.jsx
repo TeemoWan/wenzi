@@ -1,22 +1,26 @@
 import React from 'react';
-import {mount} from 'react-mounter';
+import {mount, withOptions} from 'react-mounter';
 
 import LayoutMain from './components/layout_main.jsx';
 import LayoutFullScreen from './components/layout_full_screen.jsx';
 import LayoutFluid from './components/layout_fluid.jsx';
 import Home from './components/home.jsx';
 import NotFound from './components/not_found.jsx';
-import Login from '/client/modules/auth/containers/login';
-import Register from '/client/modules/auth/containers/register';
-import ForgotPassword from '/client/modules/auth/containers/forgot_password';
-import User from '/client/modules/user/containers/user';
-import Team from '/client/modules/team/containers/team';
-import TeamAdd from '/client/modules/team/containers/team_add';
-import Document from '/client/modules/document/containers/document';
-import DocumentIndex from '/client/modules/document/containers/document_index';
-import DocumentAdd from '/client/modules/document/containers/document_add';
-import DocumentEdit from '/client/modules/document/containers/document_edit';
-import Search from '/client/modules/search/containers/search';
+import Login from '/app/modules/auth/containers/login';
+import Register from '/app/modules/auth/containers/register';
+import ForgotPassword from '/app/modules/auth/containers/forgot_password';
+import User from '/app/modules/user/containers/user';
+import Team from '/app/modules/team/containers/team';
+import TeamAdd from '/app/modules/team/containers/team_add';
+import Document from '/app/modules/document/containers/document';
+import DocumentIndex from '/app/modules/document/containers/document_index';
+import DocumentAdd from '/app/modules/document/containers/document_add';
+import DocumentEdit from '/app/modules/document/containers/document_edit';
+import Search from '/app/modules/search/containers/search';
+
+const mountWithOptions = withOptions({
+  rootId: 'wenzi'
+}, mount);
 
 export default function (injectDeps, {FlowRouter, Meteor}) {
   const LayoutMainCtx = injectDeps(LayoutMain);
@@ -38,7 +42,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/', {
     name: 'app',
     action: () => {
-      mount(LayoutMainCtx, {
+      mountWithOptions(LayoutMainCtx, {
         content: () => (<Home />)
       });
     }
@@ -48,7 +52,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'auth.login',
     triggersEnter: [ redirectIfLoggedIn ],
     action: () => {
-      mount(LayoutFullScreenCtx, {
+      mountWithOptions(LayoutFullScreenCtx, {
         content: () => (<Login />)
       });
     }
@@ -58,7 +62,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'auth.register',
     triggersEnter: [ redirectIfLoggedIn ],
     action: () => {
-      mount(LayoutFullScreenCtx, {
+      mountWithOptions(LayoutFullScreenCtx, {
         content: () => (<Register />)
       });
     }
@@ -68,7 +72,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'auth.forgotPassword',
     triggersEnter: [ redirectIfLoggedIn ],
     action: () => {
-      mount(LayoutFullScreenCtx, {
+      mountWithOptions(LayoutFullScreenCtx, {
         content: () => (<ForgotPassword />)
       });
     }
@@ -77,7 +81,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/user/:id', {
     name: 'user.user',
     action: ({id}) => {
-      mount(LayoutMainCtx, {
+      mountWithOptions(LayoutMainCtx, {
         content: () => (<User userId={id}/>)
       });
     }
@@ -87,7 +91,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'team.add',
     triggersEnter: [ checkLoggedIn ],
     action: () => {
-      mount(LayoutMainCtx, {
+      mountWithOptions(LayoutMainCtx, {
         content: () => (<TeamAdd />)
       });
     }
@@ -96,7 +100,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/team/:id', {
     name: 'team.team',
     action: ({id}) => {
-      mount(LayoutMainCtx, {
+      mountWithOptions(LayoutMainCtx, {
         content: () => (<Team teamId={id}/>)
       });
     }
@@ -105,7 +109,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/document', {
     name: 'document.index',
     action: () => {
-      mount(LayoutMainCtx, {
+      mountWithOptions(LayoutMainCtx, {
         content: () => (<DocumentIndex />)
       });
     }
@@ -115,7 +119,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'document.add',
     triggersEnter: [ checkLoggedIn ],
     action: () => {
-      mount(LayoutMainCtx, {
+      mountWithOptions(LayoutMainCtx, {
         content: () => (<DocumentAdd />)
       });
     }
@@ -124,7 +128,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/document/:id', {
     name: 'document.document',
     action: ({id}) => {
-      mount(LayoutMainCtx, {
+      mountWithOptions(LayoutMainCtx, {
         content: () => (<Document documentId={id}/>)
       });
     }
@@ -134,7 +138,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'document.edit',
     triggersEnter: [ checkLoggedIn ],
     action: ({id}) => {
-      mount(LayoutFluidCtx, {
+      mountWithOptions(LayoutFluidCtx, {
         content: () => (<DocumentEdit documentId={id}/>)
       });
     }
@@ -143,7 +147,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/search', {
     name: 'search',
     action: () => {
-      mount(LayoutMainCtx, {
+      mountWithOptions(LayoutMainCtx, {
         content: () => (<Search />)
       });
     }
@@ -151,7 +155,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
 
   FlowRouter.notFound = {
     action: () => {
-      mount(LayoutMainCtx, {
+      mountWithOptions(LayoutMainCtx, {
         content: () => (<NotFound />)
       });
     }

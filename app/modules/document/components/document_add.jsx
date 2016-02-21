@@ -1,8 +1,6 @@
 import React from 'react';
 import {$} from 'meteor/jquery';
 import classNames from 'classnames';
-import '/client/lib/semantic-ui/definitions/modules/transition.js';
-import '/client/lib/semantic-ui/definitions/modules/dropdown.js';
 
 const DocumentAdd = React.createClass({
   componentDidMount() {

@@ -1,9 +1,6 @@
 import React from 'react';
 import {$} from 'meteor/jquery';
 
-import '/client/lib/semantic-ui/definitions/modules/transition.js';
-import '/client/lib/semantic-ui/definitions/modules/popup.js';
-
 const Header = React.createClass({
   componentDidMount() {
     $('#header-menu-button')
@@ -28,7 +25,7 @@ const Header = React.createClass({
       .popup({
         popup: '#header-user-popup',
         position: 'bottom right',
-        distanceAway: 16,
+        distanceAway: 15,
         on: 'click',
         hoverable: true
       });
@@ -57,7 +54,7 @@ const Header = React.createClass({
       .popup({
         popup: '#header-user-popup',
         position: 'bottom right',
-        distanceAway: 16,
+        distanceAway: 15,
         on: 'click',
         hoverable: true
       });

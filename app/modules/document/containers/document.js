@@ -1,5 +1,5 @@
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
-import Loading from '/client/modules/core/components/loading.jsx';
+import Loading from '/app/modules/core/components/loading.jsx';
 import Document from '../components/document.jsx';
 
 const composer = ({Meteor, Collections, documentId}, onData) => {
