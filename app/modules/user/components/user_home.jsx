@@ -1,6 +1,6 @@
 import React from 'react';
 
-const User = React.createClass({
+const UserHome = React.createClass({
   render() {
     const {user} = this.props;
 
@@ -10,4 +10,4 @@ const User = React.createClass({
   }
 });
 
-export default User;
+export default UserHome;

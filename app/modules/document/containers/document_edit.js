@@ -113,7 +113,7 @@ const composer = ({Meteor, Collections, documentId}, onData) => {
     if (ownerType === 'user') {
       DocHead.setTitle(`${owner.username} / ${document.name} 编辑文档`);
     } else {
-      DocHead.setTitle(`${owner.username} / ${document.name} 编辑文档`);
+      DocHead.setTitle(`${owner.name} / ${document.name} 编辑文档`);
     }
 
     DocHead.addMeta({

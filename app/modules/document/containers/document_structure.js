@@ -1,18 +1,19 @@
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
-import Header from '../components/header.jsx';
+import DocumentStructure from '../components/document_structure.jsx';
 
-const composer = ({Meteor}, onData) => {
-  const user = Meteor.user();
-  onData(null, {user});
+const composer = ({Meteor, Collections, LocalState}, onData) => {
+
+  onData(null, {});
 };
 
 const depsMapper = (context, actions) => ({
   Meteor: context.Meteor,
   FlowRouter: context.FlowRouter,
-  logout: actions.auth.logout
+  Collections: context.Collections,
+  LocalState: context.LocalState
 });
 
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(Header);
+)(DocumentStructure);

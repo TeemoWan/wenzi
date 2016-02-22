@@ -7,6 +7,7 @@ const composer = ({Meteor, Collections, documentId}, onData) => {
 
 const depsMapper = (context, actions) => ({
   Meteor: context.Meteor,
+  FlowRouter: context.FlowRouter,
   Collections: context.Collections
 });
 

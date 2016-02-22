@@ -4,6 +4,8 @@ import classNames from 'classnames';
 const Login = React.createClass({
   render() {
     const {FlowRouter, error, processing} = this.props;
+    const registerPath = FlowRouter.path('auth.register');
+    const forgotPasswordPath = FlowRouter.path('auth.forgotPassword');
 
     return (
       <div id='login'>
@@ -37,8 +39,7 @@ const Login = React.createClass({
             </form>
 
             <div className='ui message'>
-              新用户? <a href='' onClick={() => FlowRouter.go('/register')}>注册</a> |
-              <a href='' onClick={() => FlowRouter.go('/forgotPassword')}>忘记密码</a>
+              新用户? <a href={registerPath}>注册</a> | <a href={forgotPasswordPath}>忘记密码</a>
             </div>
           </div>
         </div>

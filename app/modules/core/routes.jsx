@@ -9,10 +9,10 @@ import NotFound from './containers/not_found.js';
 import Login from '/app/modules/auth/containers/login';
 import Register from '/app/modules/auth/containers/register';
 import ForgotPassword from '/app/modules/auth/containers/forgot_password';
-import User from '/app/modules/user/containers/user';
-import Team from '/app/modules/team/containers/team';
+import UserHome from '/app/modules/user/containers/user_home';
+import TeamHome from '/app/modules/team/containers/team_home';
 import TeamAdd from '/app/modules/team/containers/team_add';
-import Document from '/app/modules/document/containers/document';
+import DocumentHome from '/app/modules/document/containers/document_home';
 import DocumentIndex from '/app/modules/document/containers/document_index';
 import DocumentAdd from '/app/modules/document/containers/document_add';
 import DocumentEdit from '/app/modules/document/containers/document_edit';
@@ -40,7 +40,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   };
 
   FlowRouter.route('/', {
-    name: 'app',
+    name: 'home',
     action: () => {
       mountWithOptions(LayoutMainCtx, {
         content: () => (<Home />)
@@ -79,10 +79,10 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   });
 
   FlowRouter.route('/user/:id', {
-    name: 'user.user',
+    name: 'user.home',
     action: ({id}) => {
       mountWithOptions(LayoutMainCtx, {
-        content: () => (<User userId={id}/>)
+        content: () => (<UserHome userId={id}/>)
       });
     }
   });
@@ -98,10 +98,10 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   });
 
   FlowRouter.route('/team/:id', {
-    name: 'team.team',
+    name: 'team.home',
     action: ({id}) => {
       mountWithOptions(LayoutMainCtx, {
-        content: () => (<Team teamId={id}/>)
+        content: () => (<TeamHome teamId={id}/>)
       });
     }
   });
@@ -126,10 +126,10 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   });
 
   FlowRouter.route('/document/:id', {
-    name: 'document.document',
+    name: 'document.home',
     action: ({id}) => {
       mountWithOptions(LayoutMainCtx, {
-        content: () => (<Document documentId={id}/>)
+        content: () => (<DocumentHome documentId={id}/>)
       });
     }
   });

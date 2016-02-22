@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 const DocumentStructure = React.createClass({
   render() {
-    const {tree} = this.props;
+    const {FlowRouter, tree} = this.props;
     let trs =[];
     let addTr = function (nodes) {
       if (!nodes || nodes.length === 0) {

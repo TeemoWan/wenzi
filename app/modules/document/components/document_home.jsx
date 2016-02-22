@@ -1,8 +1,8 @@
 import React from 'react';
 import DocumentHeader from '../containers/document_header';
-import DocumentStructure from './document_structure.jsx';
+import DocumentStructure from '../containers/document_structure';
 
-const Document = React.createClass({
+const DocumentHome = React.createClass({
   render() {
     const {document, owner, tree} = this.props;
 
@@ -15,4 +15,4 @@ const Document = React.createClass({
   }
 });
 
-export default Document;
+export default DocumentHome;

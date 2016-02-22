@@ -61,7 +61,14 @@ const Header = React.createClass({
   },
 
   render() {
-    let {user, logout} = this.props;
+    const {FlowRouter, user, logout} = this.props;
+    const searchPath = FlowRouter.path('search');
+    const homePath = FlowRouter.path('home');
+    const documentIndexPath = FlowRouter.path('document.index');
+    const documentAddPath = FlowRouter.path('document.add');
+    const teamAddPath = FlowRouter.path('team.add');
+    const loginPath = FlowRouter.path('auth.login');
+    const userHomePath = user ? FlowRouter.path('user.home', {id: user._id}) : '';
 
     return (
       <div className='ui fixed borderless secondary menu' id='header'>
@@ -70,14 +77,14 @@ const Header = React.createClass({
             <i className='sidebar icon'/>
           </button>
 
-          <a href='/search'>
+          <a href={searchPath}>
             <button className='ui circular icon button'>
               <i className='search icon'/>
             </button>
           </a>
           <div className='ui popup hidden' id='header-menu-popup'>
             <div className='ui secondary vertical menu'>
-              <a className='item' href='/document'>文档</a>
+              <a className='item' href={documentIndexPath}>文档</a>
               <a className='item' href=''>文章</a>
               <a className='item' href=''>自由分类</a>
             </div>
@@ -85,7 +92,7 @@ const Header = React.createClass({
         </div>
         <div className='item'>
           <div className='logo'>
-            <a href='/'>
+            <a href={homePath}>
               <img className='ui image' src='/images/logo.png'/>
             </a>
           </div>
@@ -101,13 +108,13 @@ const Header = React.createClass({
             <i className='alarm outline icon'/>
           </button>
 
-          <a id='header-user-button' href='#'>
+          <a id='header-user-button' href=''>
             <img className='ui avatar image' src='/images/jenny.jpg'/>
           </a>
 
           <div className='ui popup hidden' id='header-add-popup'>
             <div className='ui secondary vertical menu'>
-              <a className='item' href='/document/add'>
+              <a className='item' href={documentAddPath}>
                 <i className='book icon'/>
                 文档项目
               </a>
@@ -124,7 +131,7 @@ const Header = React.createClass({
                 结点
                 </a>
               <div className='divider'></div>
-              <a className='item' href='/team/add'>
+              <a className='item' href={teamAddPath}>
                 <i className='users icon'/>
                 团队
               </a>
@@ -133,7 +140,7 @@ const Header = React.createClass({
 
           <div className='ui popup hidden' id='header-user-popup'>
             <div className='ui secondary vertical menu'>
-              <a className='item' href={`/user/${user._id}`}>
+              <a className='item' href={userHomePath}>
                 <i className='home icon'/>
                 主页
               </a>
@@ -150,7 +157,7 @@ const Header = React.createClass({
           </div>
         </div>:
         <div className='item'>
-          <a href='/login'>
+          <a href={loginPath}>
             <button className='ui circular icon button'>
               <i className='sign in icon'/>
               注册或登录

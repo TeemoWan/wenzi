@@ -1,7 +1,7 @@
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
 import {DocHead} from 'meteor/kadira:dochead';
 import Loading from '/app/modules/core/components/loading.jsx';
-import Document from '../components/document.jsx';
+import DocumentHome from '../components/document_home.jsx';
 
 const composer = ({Meteor, Collections, documentId}, onData) => {
   if (Meteor.subscribe('document', documentId).ready()) {
@@ -79,7 +79,7 @@ const composer = ({Meteor, Collections, documentId}, onData) => {
     if (ownerType === 'user') {
       DocHead.setTitle(`${owner.username} / ${document.name}`);
     } else {
-      DocHead.setTitle(`${owner.username} / ${document.name}`);
+      DocHead.setTitle(`${owner.name} / ${document.name}`);
     }
 
     DocHead.addMeta({
@@ -100,4 +100,4 @@ const depsMapper = (context, actions) => ({
 export default composeAll(
   composeWithTracker(composer, Loading),
   useDeps(depsMapper)
-)(Document);
+)(DocumentHome);

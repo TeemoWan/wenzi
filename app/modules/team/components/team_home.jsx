@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Team = React.createClass({
+const TeamHome = React.createClass({
   render() {
     const {team} = this.props;
 
@@ -10,4 +10,4 @@ const Team = React.createClass({
   }
 });
 
-export default Team;
+export default TeamHome;

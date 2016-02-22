@@ -2,16 +2,18 @@ import React from 'react';
 
 const DocumentHeader = React.createClass({
   render() {
-    const {document, owner} = this.props;
+    const {FlowRouter, document, owner} = this.props;
+    const ownerHomePath = FlowRouter.path(document.owner.ownerType === 'user' ? 'user.home' : 'team.home', {id: owner._id});
+    const ownerName = document.owner.ownerType === 'user' ? owner.username : owner.name;
+    const documentHomePath = FlowRouter.path('document.home', {id: document._id});
+    const documentEditPath = FlowRouter.path('document.edit', {id: document._id});
 
     return (
       <div id='doc-header'>
         <h1 className='ui header'>
-          {document.owner.ownerType === 'user' ?
-          <a href={`/user/${owner._id}`}>{owner.username}</a> :
-          <a href={`/team/${owner._id}`}>{owner.name}</a>}
+          <a href={ownerHomePath}>{ownerName}</a>
           &nbsp;/&nbsp;
-          <a href={`/document/${document._id}`}><b>{document.name}</b></a>
+          <a href={documentHomePath}><b>{document.name}</b></a>
           <div className='sub header'>{document.summary}</div>
         </h1>
         <div className='ui labeled right floated small button'>
@@ -29,7 +31,7 @@ const DocumentHeader = React.createClass({
         <a href=''>
           <button className='ui teal button'>阅读</button>
         </a>
-        <a href={`/document/${document._id}/edit`}>
+        <a href={documentEditPath}>
           <button className='ui teal button'>编辑</button>
         </a>
         <a href=''>

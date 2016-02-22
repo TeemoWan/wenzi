@@ -4,6 +4,7 @@ import classNames from 'classnames';
 const Register = React.createClass({
   render() {
     const {FlowRouter, error, processing} = this.props;
+    const loginPath = FlowRouter.path('auth.login');
 
     return (
       <div className='wrapper'>
@@ -46,7 +47,7 @@ const Register = React.createClass({
               </form>
 
               <div className='ui message'>
-                已经注册了? <a href='' onClick={() => FlowRouter.go('/login')}>登录</a>
+                已经注册了? <a href={loginPath}>登录</a>
               </div>
             </div>
           </div>

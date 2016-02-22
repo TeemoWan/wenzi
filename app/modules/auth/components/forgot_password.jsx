@@ -2,7 +2,8 @@ import React from 'react';
 
 const ForgotPassword = React.createClass({
   render() {
-    const {error} = this.props;
+    const {FlowRouter, error} = this.props;
+    const loginPath = FlowRouter.path('auth.login');
 
     return (
       <div id='forgot-password'>
@@ -28,7 +29,7 @@ const ForgotPassword = React.createClass({
             </form>
 
             <div className='ui message'>
-              <a href='/login'>返回登录页</a>
+              <a href={loginPath}>返回登录页</a>
             </div>
           </div>
         </div>

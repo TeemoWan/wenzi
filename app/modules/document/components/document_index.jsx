@@ -2,7 +2,7 @@ import React from 'react';
 
 const DocumentIndex = React.createClass({
   render() {
-    const {documents} = this.props;
+    const {FlowRouter, documents} = this.props;
 
     return (
       <div className='ui relaxed divided list' id='doc-index'>
@@ -12,13 +12,10 @@ const DocumentIndex = React.createClass({
             <div className='content'>
               <div className='header'>
                 {document.owner.ownerType === 'user' ?
-                  <a href={`/user/${document.owner.user._id}`}>
-                    {document.owner.user.username}
-                  </a> :
-                  <a href={`/team/${document.owner.team._id}`}>
-                    {document.owner.team.name}
-                  </a>}
-                /<a href={`/document/${document._id}`}>{document.name}</a>
+                  <a href={FlowRouter.path('user.home', {id: document.owner.user._id})}>{document.owner.user.username}</a> :
+                  <a href={FlowRouter.path('team.home', {id: document.owner.team._id})}>{document.owner.team.name}</a>}
+                &nbsp;/&nbsp;
+                <a href={FlowRouter.path('document.home', {id: document._id})}>{document.name}</a>
               </div>
               <div className='description'>{document.summary}</div>
             </div>
