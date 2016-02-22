@@ -4,11 +4,14 @@ import {FlowRouter} from 'meteor/kadira:flow-router-ssr';
 import {ReactiveDict} from 'meteor/reactive-dict';
 import {Tracker} from 'meteor/tracker';
 
+WenziSubs = new SubsManager();
+
 export default function () {
   return {
     Meteor,
     FlowRouter,
     Collections,
+    WenziSubs,
     LocalState: new ReactiveDict(),
     Tracker
   };

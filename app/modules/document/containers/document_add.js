@@ -3,8 +3,8 @@ import {DocHead} from 'meteor/kadira:dochead';
 import Loading from '/app/modules/core/components/loading.jsx';
 import DocumentAdd from '../components/document_add.jsx';
 
-const composer = ({Meteor, Collections, LocalState, clearDocumentAdd}, onData) => {
-  if (Meteor.subscribe('teamsByAdmins', Meteor.userId()).ready()) {
+const composer = ({Collections, WenziSubs, LocalState, clearDocumentAdd}, onData) => {
+  if (WenziSubs.subscribe('teamsByAdmins', Meteor.userId()).ready()) {
     let error = LocalState.get('DOCUMENT_ADD_ERROR');
     let processing = LocalState.get('DOCUMENT_ADD_PROCESSING');
     let user = Meteor.user();
@@ -23,8 +23,8 @@ const composer = ({Meteor, Collections, LocalState, clearDocumentAdd}, onData) =
 };
 
 const depsMapper = (context, actions) => ({
-  Meteor: context.Meteor,
   Collections: context.Collections,
+  WenziSubs: context.WenziSubs,
   LocalState: context.LocalState,
   documentAdd: actions.documents.documentAdd,
   clearDocumentAdd: actions.documents.clearDocumentAdd

@@ -2,9 +2,9 @@ import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
 import {DocHead} from 'meteor/kadira:dochead';
 import DocumentEdit from '../components/document_edit.jsx';
 
-const composer = ({Meteor, Collections, documentId}, onData) => {
+const composer = ({Collections, WenziSubs, documentId}, onData) => {
 
-  if (Meteor.subscribe('document', documentId).ready()) {
+  if (WenziSubs.subscribe('document', documentId).ready()) {
     let document = Collections.Documents.findOne(documentId);
     let {ownerType, ownerId} = document.owner;
     let owner;
@@ -123,8 +123,8 @@ const composer = ({Meteor, Collections, documentId}, onData) => {
 };
 
 const depsMapper = (context, actions) => ({
-  Meteor: context.Meteor,
-  Collections: context.Collections
+  Collections: context.Collections,
+  WenziSubs: context.WenziSubs
 });
 
 export default composeAll(

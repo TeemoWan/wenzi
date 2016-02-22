@@ -3,8 +3,8 @@ import {DocHead} from 'meteor/kadira:dochead';
 import Loading from '/app/modules/core/components/loading.jsx';
 import UserHome from '../components/user_home.jsx';
 
-const composer = ({Meteor, Collections, userId}, onData) => {
-  if (Meteor.subscribe('user', userId).ready()) {
+const composer = ({Collections, WenziSubs, userId}, onData) => {
+  if (WenziSubs.subscribe('user', userId).ready()) {
     let user = Collections.Users.findOne(userId);
     onData(null, {user});
 
@@ -17,8 +17,8 @@ const composer = ({Meteor, Collections, userId}, onData) => {
 };
 
 const depsMapper = (context, actions) => ({
-  Meteor: context.Meteor,
   FlowRouter: context.FlowRouter,
+  WenziSubs: context.WenziSubs,
   Collections: context.Collections
 });
 

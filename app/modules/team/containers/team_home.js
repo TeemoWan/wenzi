@@ -3,8 +3,8 @@ import {DocHead} from 'meteor/kadira:dochead';
 import Loading from '/app/modules/core/components/loading.jsx';
 import TeamHome from '../components/team_home.jsx';
 
-const composer = ({Meteor, Collections, teamId}, onData) => {
-  if (Meteor.subscribe('team', teamId).ready()) {
+const composer = ({Collections, WenziSubs, teamId}, onData) => {
+  if (WenziSubs.subscribe('team', teamId).ready()) {
     const team = Collections.Teams.findOne(teamId);
     onData(null, {team});
 
@@ -21,8 +21,8 @@ const composer = ({Meteor, Collections, teamId}, onData) => {
 };
 
 const depsMapper = (context, actions) => ({
-  Meteor: context.Meteor,
   FlowRouter: context.FlowRouter,
+  WenziSubs: context.WenziSubs,
   Collections: context.Collections
 });
 
