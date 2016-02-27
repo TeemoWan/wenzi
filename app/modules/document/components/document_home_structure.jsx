@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const DocumentStructure = React.createClass({
+const DocumentHomeStructure = React.createClass({
   render() {
     const {FlowRouter, tree} = this.props;
     let trs =[];
@@ -42,4 +42,4 @@ const DocumentStructure = React.createClass({
   }
 });
 
-export default DocumentStructure;
+export default DocumentHomeStructure;

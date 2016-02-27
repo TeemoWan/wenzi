@@ -1,7 +1,8 @@
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
-import DocumentStructure from '../components/document_structure.jsx';
+import DocumentEditHeader from '../components/document_edit_header.jsx';
 
-const composer = ({Meteor, Collections, LocalState}, onData) => {
+const composer = ({Meteor, Collections, documentId}, onData) => {
+
 
   onData(null, {});
 };
@@ -9,11 +10,10 @@ const composer = ({Meteor, Collections, LocalState}, onData) => {
 const depsMapper = (context, actions) => ({
   Meteor: context.Meteor,
   FlowRouter: context.FlowRouter,
-  Collections: context.Collections,
-  LocalState: context.LocalState
+  Collections: context.Collections
 });
 
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(DocumentStructure);
+)(DocumentEditHeader);

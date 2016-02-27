@@ -1,9 +1,8 @@
 import React from 'react';
 import {mount, withOptions} from 'react-mounter';
 
-import LayoutMain from './components/layout_main.jsx';
-import LayoutFullScreen from './components/layout_full_screen.jsx';
-import LayoutFluid from './components/layout_fluid.jsx';
+import LayoutNavContent from './components/layout_nav_content.jsx';
+import LayoutContent from './components/layout_content.jsx';
 import Home from './containers/home.js';
 import NotFound from './containers/not_found.js';
 import Login from '/app/modules/auth/containers/login';
@@ -23,9 +22,8 @@ const mountWithOptions = withOptions({
 }, mount);
 
 export default function (injectDeps, {FlowRouter, Meteor}) {
-  const LayoutMainCtx = injectDeps(LayoutMain);
-  const LayoutFullScreenCtx = injectDeps(LayoutFullScreen);
-  const LayoutFluidCtx = injectDeps(LayoutFluid);
+  const LayoutNavContentCtx = injectDeps(LayoutNavContent);
+  const LayoutContentCtx = injectDeps(LayoutContent);
 
   const checkLoggedIn = () => {
     if (!Meteor.loggingIn() && !Meteor.userId()) {
@@ -42,7 +40,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/', {
     name: 'home',
     action: () => {
-      mountWithOptions(LayoutMainCtx, {
+      mountWithOptions(LayoutNavContentCtx, {
         content: () => (<Home />)
       });
     }
@@ -52,7 +50,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'auth.login',
     triggersEnter: [ redirectIfLoggedIn ],
     action: () => {
-      mountWithOptions(LayoutFullScreenCtx, {
+      mountWithOptions(LayoutContentCtx, {
         content: () => (<Login />)
       });
     }
@@ -62,7 +60,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'auth.register',
     triggersEnter: [ redirectIfLoggedIn ],
     action: () => {
-      mountWithOptions(LayoutFullScreenCtx, {
+      mountWithOptions(LayoutContentCtx, {
         content: () => (<Register />)
       });
     }
@@ -72,7 +70,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'auth.forgotPassword',
     triggersEnter: [ redirectIfLoggedIn ],
     action: () => {
-      mountWithOptions(LayoutFullScreenCtx, {
+      mountWithOptions(LayoutContentCtx, {
         content: () => (<ForgotPassword />)
       });
     }
@@ -81,7 +79,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/user/:id', {
     name: 'user.home',
     action: ({id}) => {
-      mountWithOptions(LayoutMainCtx, {
+      mountWithOptions(LayoutNavContentCtx, {
         content: () => (<UserHome userId={id}/>)
       });
     }
@@ -91,7 +89,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'team.add',
     triggersEnter: [ checkLoggedIn ],
     action: () => {
-      mountWithOptions(LayoutMainCtx, {
+      mountWithOptions(LayoutNavContentCtx, {
         content: () => (<TeamAdd />)
       });
     }
@@ -100,7 +98,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/team/:id', {
     name: 'team.home',
     action: ({id}) => {
-      mountWithOptions(LayoutMainCtx, {
+      mountWithOptions(LayoutNavContentCtx, {
         content: () => (<TeamHome teamId={id}/>)
       });
     }
@@ -109,7 +107,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/document', {
     name: 'document.index',
     action: () => {
-      mountWithOptions(LayoutMainCtx, {
+      mountWithOptions(LayoutNavContentCtx, {
         content: () => (<DocumentIndex />)
       });
     }
@@ -119,7 +117,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'document.add',
     triggersEnter: [ checkLoggedIn ],
     action: () => {
-      mountWithOptions(LayoutMainCtx, {
+      mountWithOptions(LayoutNavContentCtx, {
         content: () => (<DocumentAdd />)
       });
     }
@@ -128,7 +126,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/document/:id', {
     name: 'document.home',
     action: ({id}) => {
-      mountWithOptions(LayoutMainCtx, {
+      mountWithOptions(LayoutNavContentCtx, {
         content: () => (<DocumentHome documentId={id}/>)
       });
     }
@@ -138,7 +136,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
     name: 'document.edit',
     triggersEnter: [ checkLoggedIn ],
     action: ({id}) => {
-      mountWithOptions(LayoutFluidCtx, {
+      mountWithOptions(LayoutContentCtx, {
         content: () => (<DocumentEdit documentId={id}/>)
       });
     }
@@ -147,7 +145,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
   FlowRouter.route('/search', {
     name: 'search',
     action: () => {
-      mountWithOptions(LayoutMainCtx, {
+      mountWithOptions(LayoutNavContentCtx, {
         content: () => (<Search />)
       });
     }
@@ -155,7 +153,7 @@ export default function (injectDeps, {FlowRouter, Meteor}) {
 
   FlowRouter.notFound = {
     action: () => {
-      mountWithOptions(LayoutMainCtx, {
+      mountWithOptions(LayoutNavContentCtx, {
         content: () => (<NotFound />)
       });
     }

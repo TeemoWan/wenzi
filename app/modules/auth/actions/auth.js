@@ -93,7 +93,8 @@ export default {
     LocalState.set('FORGOTPASSWORD_PROCESSING', false);
   },
 
-  logout({Meteor}) {
+  logout({Meteor, FlowRouter}) {
     Meteor.logout();
+    FlowRouter.go('/');
   }
 };

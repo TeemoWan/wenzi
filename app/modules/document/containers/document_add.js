@@ -1,5 +1,4 @@
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
-import {DocHead} from 'meteor/kadira:dochead';
 import Loading from '/app/modules/core/components/loading.jsx';
 import DocumentAdd from '../components/document_add.jsx';
 
@@ -11,12 +10,6 @@ const composer = ({Collections, WenziSubs, LocalState, clearDocumentAdd}, onData
     let teams = Collections.Teams.find({admins: Meteor.userId()}).fetch();
 
     onData(null, {error, processing, user, teams});
-
-    // SEO
-    DocHead.setTitle('添加文档');
-    DocHead.addMeta({
-      name: 'description', content: '添加文档'
-    });
   }
 
   return clearDocumentAdd;

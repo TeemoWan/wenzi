@@ -1,6 +1,6 @@
 import React from 'react';
-import DocumentHeader from '../containers/document_header';
-import DocumentStructure from '../containers/document_structure';
+import DocumentHomeHeader from '../containers/document_home_header';
+import DocumentHomeStructure from '../containers/document_home_structure';
 
 const DocumentHome = React.createClass({
   render() {
@@ -8,8 +8,8 @@ const DocumentHome = React.createClass({
 
     return (
       <div>
-        <DocumentHeader document={document} owner={owner}/>
-        <DocumentStructure tree={tree}/>
+        <DocumentHomeHeader document={document} owner={owner}/>
+        <DocumentHomeStructure tree={tree}/>
       </div>
     );
   }

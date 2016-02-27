@@ -1,5 +1,5 @@
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
-import Header from '../components/header.jsx';
+import Nav from '../components/nav.jsx';
 
 const composer = ({Meteor}, onData) => {
   const user = Meteor.user();
@@ -15,4 +15,4 @@ const depsMapper = (context, actions) => ({
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(Header);
+)(Nav);

@@ -18,7 +18,7 @@ const Login = React.createClass({
               </div>
             </h2>
             <form className={classNames('ui', 'large', 'form', {error: Boolean(error)})}>
-              <div className='ui stacked segment'>
+              <div className='ui segment'>
                 <div className='field'>
                   <div className='ui left icon input'>
                     <i className='mail icon'/>

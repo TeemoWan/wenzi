@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DocumentHeader = React.createClass({
+const DocumentHomeHeader = React.createClass({
   render() {
     const {FlowRouter, document, owner} = this.props;
     const ownerHomePath = FlowRouter.path(document.owner.ownerType === 'user' ? 'user.home' : 'team.home', {id: owner._id});
@@ -50,4 +50,4 @@ const DocumentHeader = React.createClass({
   }
 });
 
-export default DocumentHeader;
+export default DocumentHomeHeader;

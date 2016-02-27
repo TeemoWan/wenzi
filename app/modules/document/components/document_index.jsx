@@ -5,10 +5,9 @@ const DocumentIndex = React.createClass({
     const {FlowRouter, documents} = this.props;
 
     return (
-      <div className='ui relaxed divided list' id='doc-index'>
+      <div className='ui segments' id='doc-index'>
         {documents.map(document =>
-          <div className='item' key={document._id}>
-            <i className='large github middle aligned icon'/>
+          <div className='ui segment' key={document._id}>
             <div className='content'>
               <div className='header'>
                 {document.owner.ownerType === 'user' ?

@@ -1,38 +1,49 @@
 @import 'nib'
 
+html,
+body,
 #wenzi
-  margin: 0;
-  overflow-x: hidden;
-  padding: 0;
+  position: fixed;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+html
+  color: #000;
+  background: #FFF;
 
 .wrapper
-  margin: 0;
-  overflow-x: hidden;
-  padding: 0;
-  height: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
 
-.main.container
-  margin-top: 56px;
-  padding: 0;
+#nav
+  position: absolute;
+  height: 62px;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10001;
+  overflow: visible;
+  user-select: none;
 
-.wrapper
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
-#header
-  flex: none;
-
-.ui.menu#header
-  background: #FFFFFF;
+#nav.ui.menu
+  border-radius: 0;
+  border: none;
   border-bottom: 1px solid rgba(51, 51, 51, 0.15);
   box-shadow: none;
   flex-wrap: nowrap;
   justify-content: space-between;
+  margin: 0;
   .item
     display: block;
     flex: auto;
+    padding: 0.92857143em;
   .item:first-child
     display: flex;
     justify-content: flex-start;
@@ -45,39 +56,35 @@
     flex: none;
   .logo
     margin: 0 auto;
-    width: 35px;
+    width: 34px;
     img
       margin-right: 0;
-      width: 35px;
-      height: 35px;
+      width: 34px;
+      height: 34px;
 
-#header-menu-button
+#nav-menu,
+#nav-alarm,
+#nav-add,
+#nav-help
   margin-right: 0.928571em;
 
-#header-alarm-button,
-#header-add-button
-  margin-right: 0.928571em;
-
-#header-user-button
+#nav-user
   .ui.avatar.image
     height: 34px;
     width: 34px;
 
 #content
-  flex: 1 0 auto; /* 2 */
+  z-index: 10000;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  overflow: auto;
 
-#home
-  padding: 30px 0 50px;
-
-#not-found
-  padding: 30px 0 50px;
-
-#fluid-content
-  padding: 56px 0 0;
-  flex: auto;
-  display: block;
-  width: 100%;
-  height: 100%;
+.main.container
+  padding: 40px 0 60px;
 
 .ui.popup
   box-shadow: none;

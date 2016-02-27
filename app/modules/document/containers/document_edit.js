@@ -1,12 +1,12 @@
 import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
-import {DocHead} from 'meteor/kadira:dochead';
 import DocumentEdit from '../components/document_edit.jsx';
 
-const composer = ({Collections, WenziSubs, documentId}, onData) => {
+const composer = ({Meteor, Collections, WenziSubs, documentId}, onData) => {
 
   if (WenziSubs.subscribe('document', documentId).ready()) {
     let document = Collections.Documents.findOne(documentId);
     let {ownerType, ownerId} = document.owner;
+    let user = Meteor.user();
     let owner;
 
     if (ownerType === 'user') {
@@ -107,24 +107,16 @@ const composer = ({Collections, WenziSubs, documentId}, onData) => {
       }]
     };
 
-    onData(null, {document, owner, tree});
-
-    // SEO
-    if (ownerType === 'user') {
-      DocHead.setTitle(`${owner.username} / ${document.name} 编辑文档`);
-    } else {
-      DocHead.setTitle(`${owner.name} / ${document.name} 编辑文档`);
-    }
-
-    DocHead.addMeta({
-      name: 'description', content: document.summary
-    });
+    onData(null, {document, owner, user, tree});
   }
 };
 
 const depsMapper = (context, actions) => ({
+  Meteor: context.Meteor,
   Collections: context.Collections,
-  WenziSubs: context.WenziSubs
+  WenziSubs: context.WenziSubs,
+  FlowRouter: context.FlowRouter,
+  logout: actions.auth.logout
 });
 
 export default composeAll(
