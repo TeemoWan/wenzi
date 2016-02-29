@@ -19,6 +19,7 @@ const Nav = React.createClass({
     const teamAddPath = FlowRouter.path('team.add');
     const loginPath = FlowRouter.path('auth.login');
     const userHomePath = user ? FlowRouter.path('user.home', {id: user._id}) : '';
+    const settingsDomainPath = FlowRouter.path('settings.domain');
 
     return (
       <div className='ui borderless menu' id='nav'>
@@ -85,7 +86,7 @@ const Nav = React.createClass({
               <a className='item' href={userHomePath}>
                 <i className='home icon'/> 主页
               </a>
-              <a className='item'>
+              <a className='item' href={settingsDomainPath}>
                 <i className='setting icon'/> 设置
               </a>
               <div className='divider'></div>

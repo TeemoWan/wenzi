@@ -8,6 +8,7 @@ import authModule from './modules/auth';
 import teamModule from './modules/team';
 import documentModule from './modules/document';
 import searchModule from './modules/search';
+import settingsModule from './modules/settings';
 
 // init context
 const context = initContext();
@@ -20,4 +21,5 @@ app.loadModule(authModule);
 app.loadModule(teamModule);
 app.loadModule(documentModule);
 app.loadModule(searchModule);
+app.loadModule(settingsModule);
 app.init();

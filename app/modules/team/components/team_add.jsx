@@ -9,7 +9,7 @@ const TeamAdd = React.createClass({
       <div className='ui grid' id='team-add'>
         <div className='two wide column'></div>
         <div className='twelve wide column'>
-          <form className={classNames('ui', 'form', {error: Boolean(error)})}>
+          <form className={classNames('ui', 'form', {error: Boolean(error)})} onSubmit={this.handleSubmit}>
             <h2 className='ui dividing header'>创建团队</h2>
             {error && <div className='ui error message'><p>{error}</p></div>}
             <div className='field'>
@@ -21,8 +21,8 @@ const TeamAdd = React.createClass({
               <textarea type='text' ref='summary' placeholder='团队简介...' rows='3' />
             </div>
             {processing ?
-              <div className='ui teal loading disabled button'></div> :
-              <div className='ui teal button' onClick={this.handleSubmit}>创建团队</div>}
+              <div className='ui teal loading disabled button'>&nbsp;</div> :
+              <div className='ui teal button'>创建团队</div>}
           </form>
         </div>
         <div className='two wide column'></div>
@@ -30,7 +30,11 @@ const TeamAdd = React.createClass({
     );
   },
 
-  handleSubmit() {
+  handleSubmit(event) {
+    if (event && event.preventDefault) {
+      event.preventDefault();
+    }
+
     const {teamAdd} = this.props;
     const {name, summary} = this.refs;
 

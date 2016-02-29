@@ -18,7 +18,6 @@ ecmascript
 accounts-password
 alanning:roles
 flemay:less-autoprefixer
-dburles:collection-helpers
 stylus
 semantic:ui
 standard-minifier-css
@@ -27,3 +26,8 @@ kadira:dochead
 meteorhacks:subs-manager
 aldeed:collection2
 kadira:flow-router-ssr
+jagi:astronomy
+jagi:astronomy-slug-behavior
+jagi:astronomy-timestamp-behavior
+jagi:astronomy-validators
+email

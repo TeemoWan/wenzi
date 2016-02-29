@@ -47,7 +47,7 @@ const DocumentAdd = React.createClass({
       <div className='ui grid' id='doc-add'>
         <div className='two wide column'></div>
         <div className='twelve wide column'>
-          <form className={classNames('ui', 'form', {error: Boolean(error)})}>
+          <form className={classNames('ui', 'form', {error: Boolean(error)})} onSubmit={this.handleSubmit}>
             <h2 className='ui dividing header'>添加文档</h2>
             {error && <div className='ui error message'><p>{error}</p></div>}
             <div className='fields'>
@@ -72,8 +72,8 @@ const DocumentAdd = React.createClass({
               <textarea ref='summary' placeholder='文档简介...' />
             </div>
             {processing ?
-              <div className='ui teal loading disabled button'></div> :
-              <div className='ui teal button' onClick={this.handleSubmit}>添加文档</div>}
+              <div className='ui teal loading disabled button'>&nbsp;</div> :
+              <div className='ui teal button'>添加文档</div>}
           </form>
         </div>
         <div className='two wide column'></div>
@@ -81,7 +81,11 @@ const DocumentAdd = React.createClass({
     );
   },
 
-  handleSubmit() {
+  handleSubmit(event) {
+    if (event && event.preventDefault) {
+      event.preventDefault();
+    }
+
     const {documentAdd} = this.props;
     const {owner, name, summary} = this.refs;
     const [ ownerType, ownerId ] = owner.value.split(':');
