@@ -3,10 +3,7 @@ import Loading from '/app/modules/core/components/loading.jsx';
 import SettingsDomain from '../components/settings_domain.jsx';
 
 const composer = ({Meteor, Collections, WenziSubs, userId}, onData) => {
-  if (WenziSubs.subscribe('settings').ready()) {
-    let user = Collections.Users.findOne(Meteor.userId);
-    onData(null, {user});
-  }
+  onData(null, {});
 };
 
 const depsMapper = (context, actions) => ({

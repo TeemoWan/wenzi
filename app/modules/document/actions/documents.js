@@ -1,5 +1,7 @@
+import {Random} from 'meteor/random';
 import update from 'react/lib/update';
 import _ from 'lodash';
+import Document from '/lib/document';
 
 const generateEditTreeRouter = (tree, path='') => {
   let routes = {};
@@ -14,27 +16,38 @@ const generateEditTreeRouter = (tree, path='') => {
 
 export default {
   documentAdd({Meteor, LocalState, FlowRouter}, ownerType, ownerId, name, summary) {
-    if (name === '') {
+    let document = new Document();
+    document.set({name, summary, owner: {ownerType, ownerId}});
+
+    if (!name) {
       return LocalState.set('DOCUMENT_ADD_ERROR', '文档名必须填写');
+    }
+
+    if (!document.validate(name)) {
+      return LocalState.set('DOCUMENT_ADD_ERROR', '文档名过长,不要超过120字符');
+    }
+
+    if (!document.validate(summary)) {
+      return LocalState.set('DOCUMENT_ADD_ERROR', '文档简介过长,不要超过1000字符');
     }
 
     LocalState.set('DOCUMENT_ADD_ERROR', null);
     LocalState.set('DOCUMENT_ADD_PROCESSING', true);
 
-    Meteor.call('documentAdd', ownerType, ownerId, name, summary, (err, res) => {
+    Meteor.call('document.add', ownerType, ownerId, name, summary, (err, res) => {
+      LocalState.set('DOCUMENT_ADD_PROCESSING', false);
+
       if (err) {
-        LocalState.set('DOCUMENT_ADD_PROCESSING', false);
-        LocalState.set('DOCUMENT_ADD_ERROR', err.reason);
-      } else {
-        LocalState.set('DOCUMENT_ADD_PROCESSING', false);
-        FlowRouter.go(`/document/${res}`);
+        return LocalState.set('DOCUMENT_ADD_ERROR', err.reason);
       }
+
+      FlowRouter.go(`/document/${res._id}`);
     });
   },
 
   clearDocumentAdd({LocalState}) {
-    LocalState.set('DOCUMENT_ADD_ERROR', null);
     LocalState.set('DOCUMENT_ADD_PROCESSING', false);
+    LocalState.set('DOCUMENT_ADD_ERROR', null);
   },
 
   initDocumentEditTree({LocalState}, tree) {

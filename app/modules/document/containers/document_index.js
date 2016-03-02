@@ -3,13 +3,13 @@ import {DocHead} from 'meteor/kadira:dochead';
 import Loading from '/app/modules/core/components/loading.jsx';
 import DocumentIndex from '../components/document_index.jsx';
 
-const composer = ({Collections, WenziSubs}, onData) => {
-  if (WenziSubs.subscribe('documents', 20).ready()) {
+const composer = ({Meteor, Collections, WenziSubs}, onData) => {
+  if (WenziSubs.subscribe('documents.list', 20).ready()) {
     let documents = Collections.Documents.find({}, {sort: {createdAt: -1}, limit: 20}).fetch();
 
     documents.forEach(document => {
       if (document.owner.ownerType === 'user') {
-        document.owner.user = Collections.Users.findOne({_id: document.owner.ownerId});
+        document.owner.user = Meteor.users.findOne({_id: document.owner.ownerId});
       } else {
         document.owner.team = Collections.Teams.findOne({_id: document.owner.ownerId});
       }
@@ -26,6 +26,7 @@ const composer = ({Collections, WenziSubs}, onData) => {
 };
 
 const depsMapper = (context, actions) => ({
+  Meteor: context.Meteor,
   WenziSubs: context.WenziSubs,
   FlowRouter: context.FlowRouter,
   Collections: context.Collections

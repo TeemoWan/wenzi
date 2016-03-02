@@ -1,11 +1,14 @@
 import React from 'react';
+import NotFound from '/app/modules/core/containers/not_found.js';
 
 const TeamHome = React.createClass({
   render() {
-    const {team} = this.props;
+    const {notFound, team} = this.props;
 
     return (
-      <div id='team'>{team.name}</div>
+      notFound ?
+        <NotFound/> :
+        <div id='team'>{team.name}</div>
     );
   }
 });

@@ -3,14 +3,14 @@ import DocumentEdit from '../components/document_edit.jsx';
 
 const composer = ({Meteor, Collections, WenziSubs, documentId}, onData) => {
 
-  if (WenziSubs.subscribe('document', documentId).ready()) {
+  if (WenziSubs.subscribe('documents.single', documentId).ready()) {
     let document = Collections.Documents.findOne(documentId);
     let {ownerType, ownerId} = document.owner;
     let user = Meteor.user();
     let owner;
 
     if (ownerType === 'user') {
-      owner= Collections.Users.findOne({_id: ownerId});
+      owner= Meteor.users.findOne({_id: ownerId});
     } else {
       owner = Collections.Teams.findOne({_id: ownerId});
     }

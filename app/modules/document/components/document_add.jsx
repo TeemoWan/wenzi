@@ -24,7 +24,7 @@ const DocumentAdd = React.createClass({
   },
 
   render() {
-    const {error, processing, user, teams} = this.props;
+    const {processing, error, user, teams} = this.props;
     let items = [];
 
     items.push(
@@ -47,7 +47,7 @@ const DocumentAdd = React.createClass({
       <div className='ui grid' id='doc-add'>
         <div className='two wide column'></div>
         <div className='twelve wide column'>
-          <form className={classNames('ui', 'form', {error: Boolean(error)})} onSubmit={this.handleSubmit}>
+          <form className={classNames('ui', 'form', {error: Boolean(error)})}>
             <h2 className='ui dividing header'>添加文档</h2>
             {error && <div className='ui error message'><p>{error}</p></div>}
             <div className='fields'>
@@ -73,7 +73,7 @@ const DocumentAdd = React.createClass({
             </div>
             {processing ?
               <div className='ui teal loading disabled button'>&nbsp;</div> :
-              <div className='ui teal button'>添加文档</div>}
+              <div className='ui teal button' onClick={this.handleSubmit}>添加文档</div>}
           </form>
         </div>
         <div className='two wide column'></div>
@@ -81,11 +81,7 @@ const DocumentAdd = React.createClass({
     );
   },
 
-  handleSubmit(event) {
-    if (event && event.preventDefault) {
-      event.preventDefault();
-    }
-
+  handleSubmit() {
     const {documentAdd} = this.props;
     const {owner, name, summary} = this.refs;
     const [ ownerType, ownerId ] = owner.value.split(':');

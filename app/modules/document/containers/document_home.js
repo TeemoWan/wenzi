@@ -3,14 +3,21 @@ import {DocHead} from 'meteor/kadira:dochead';
 import Loading from '/app/modules/core/components/loading.jsx';
 import DocumentHome from '../components/document_home.jsx';
 
-const composer = ({Collections, WenziSubs, documentId}, onData) => {
-  if (WenziSubs.subscribe('document', documentId).ready()) {
+const composer = ({Meteor, Collections, WenziSubs, documentId}, onData) => {
+  if (WenziSubs.subscribe('documents.single', documentId).ready()) {
     let document = Collections.Documents.findOne(documentId);
+    let notFound = false;
+
+    if (!document) {
+      notFound = true;
+      return onData(null, {notFound});
+    }
+
     let {ownerType, ownerId} = document.owner;
     let owner;
 
     if (ownerType === 'user') {
-      owner= Collections.Users.findOne({_id: ownerId});
+      owner= Meteor.users.findOne({_id: ownerId});
     } else {
       owner = Collections.Teams.findOne({_id: ownerId});
     }
@@ -73,7 +80,7 @@ const composer = ({Collections, WenziSubs, documentId}, onData) => {
       }]
     };
 
-    onData(null, {document, owner, tree});
+    onData(null, {notFound, document, owner, tree});
 
     // SEO
     if (ownerType === 'user') {
@@ -93,6 +100,7 @@ const composer = ({Collections, WenziSubs, documentId}, onData) => {
 };
 
 const depsMapper = (context, actions) => ({
+  Meteor: context.Meteor,
   WenziSubs: context.WenziSubs,
   Collections: context.Collections
 });

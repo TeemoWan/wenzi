@@ -4,13 +4,13 @@ import Loading from '/app/modules/core/components/loading.jsx';
 import DocumentAdd from '../components/document_add.jsx';
 
 const composer = ({Collections, WenziSubs, LocalState, clearDocumentAdd}, onData) => {
-  if (WenziSubs.subscribe('teamsByAdmins', Meteor.userId()).ready()) {
+  if (WenziSubs.subscribe('teams.admins', Meteor.userId()).ready()) {
     let error = LocalState.get('DOCUMENT_ADD_ERROR');
     let processing = LocalState.get('DOCUMENT_ADD_PROCESSING');
     let user = Meteor.user();
     let teams = Collections.Teams.find({admins: Meteor.userId()}).fetch();
 
-    onData(null, {error, processing, user, teams});
+    onData(null, {processing, error, user, teams});
 
     // SEO
     DocHead.setTitle('添加文档');

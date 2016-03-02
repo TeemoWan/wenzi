@@ -1,30 +1,21 @@
-import Collections from '/lib/collections';
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
 export default function () {
-  Meteor.publish('currentUser', () => {
-    return Collections.Users.find({_id: this.userId}, {
-      fields: {
-        username: 1,
-        emails: 1,
-        role: 1,
-        createdAt: 1,
-        profile: 1,
-        domain: 1
-      }
-    });
+  Meteor.publish('users.current', () => {
+    const selector = {_id: this.userId};
+    const response = Meteor.users.find(selector);
+    // console.log ('publish users.current _id', this.userId);
+    // console.log ('publish users.current response', response);
+    return response;
   });
 
-  Meteor.publish('user', id => {
-    check(id, String);
-    return Collections.Users.find({_id: id}, {
-      fields: {
-        username: 1,
-        emails: 1,
-        profile: 1,
-        createdAt: 1
-      }
-    });
+  Meteor.publish('users.single', _id => {
+    check(_id, String);
+    const selector = {_id};
+    const response = Meteor.users.find(selector);
+    // console.log ('publish users.single _id', _id);
+    // console.log ('publish users.single response', response);
+    return response;
   });
 }

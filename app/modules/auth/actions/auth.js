@@ -1,8 +1,8 @@
-import {SimpleSchema} from 'meteor/aldeed:simple-schema';
+import {UserAuth} from '/lib/user';
 
 export default {
   login({Meteor, LocalState, FlowRouter}, email, password) {
-    if (email === '' || password === '') {
+    if (!email || !password) {
       return LocalState.set('LOGIN_ERROR', '邮箱地址及密码必须填写');
     }
 
@@ -26,31 +26,33 @@ export default {
   },
 
   register({Meteor, LocalState, FlowRouter}, email, username, password) {
-    let emailRegExp = SimpleSchema.RegEx.Email;
-    let usernameRegExp = new RegExp(/^[a-zA-Z0-9_\u4e00-\u9fa5]{2,16}$/);
-    let passwordRegExp = new RegExp(/^[a-zA-Z0-9~!@#$%^&*()_+]{6,16}$/);
+    let user = new UserAuth();
 
-    if (email === '') {
+    user.set('email', email);
+    user.set('username', username);
+    user.set('password', password);
+
+    if (!email) {
       return LocalState.set('REGISTER_ERROR', '邮箱地址必须填写');
     }
 
-    if (!emailRegExp.test(email)) {
+    if (!user.validate('email')) {
       return LocalState.set('REGISTER_ERROR', '邮箱格式不正确');
     }
 
-    if (username === '') {
+    if (!username) {
       return LocalState.set('REGISTER_ERROR', '用户名必须填写');
     }
 
-    if (!usernameRegExp.test(username)) {
+    if (!user.validate('username')) {
       return LocalState.set('REGISTER_ERROR', '用户名格式不正确，可以使用汉字、大小写字母、数字、下划线，长度2到16个字符');
     }
 
-    if (password === '') {
+    if (!password) {
       return LocalState.set('REGISTER_ERROR', '密码必须填写');
     }
 
-    if (!passwordRegExp.test(password)) {
+    if (!user.validate('password')) {
       return LocalState.set('REGISTER_ERROR', '密码格式不正确，必须使用大小写字母、数字、特殊字符，长度6到16个字符');
     }
 

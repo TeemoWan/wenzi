@@ -1,32 +1,35 @@
-import Collections from '/lib/collections';
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
+import {Teams} from '/lib/collections';
+import Team from '/lib/team';
 
 export default function () {
   Meteor.methods({
-    teamAdd(name, summary) {
+    'team.add'(name, summary) {
       check(name, String);
       check(summary, String);
 
-      if (name === '') {
+      let team = new Team();
+      team.set({name, summary, admins: [this.userId], members: [this.userId]});
+
+      if (!name) {
         throw new Meteor.Error('nameEmpty', '团队名必须填写');
       }
 
-      if (name.length > 30) {
+      if (!team.validate(name)) {
         throw new Meteor.Error('nameTooLong', '团队名过长,不要超过30字符');
       }
 
-      // TODO: 用户权限判断
-      if (Collections.Teams.findOne({name: name})) {
+      if (!team.validate(summary)) {
+        throw new Meteor.Error('summaryTooLong', '团队简介过长,不要超过1000字符');
+      }
+
+      if (Teams.findOne({name: name})) {
         throw new Meteor.Error('nameExist', '此团队名已经被占用');
       }
 
-      return Collections.Teams.insert({
-        name,
-        summary,
-        admins: [this.userId],
-        members: [this.userId]
-      });
+      team.save();
+      return team;
     }
   });
 }

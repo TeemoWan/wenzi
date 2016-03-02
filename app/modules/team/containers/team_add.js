@@ -5,7 +5,7 @@ import TeamAdd from '../components/team_add.jsx';
 const composer = ({LocalState, clearTeamAdd}, onData) => {
   const error = LocalState.get('TEAM_ADD_ERROR');
   const processing = LocalState.get('TEAM_ADD_PROCESSING');
-  onData(null, {error, processing});
+  onData(null, {processing, error});
 
   // SEO
   DocHead.setTitle('创建团队');

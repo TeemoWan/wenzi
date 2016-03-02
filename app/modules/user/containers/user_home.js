@@ -3,10 +3,17 @@ import {DocHead} from 'meteor/kadira:dochead';
 import Loading from '/app/modules/core/components/loading.jsx';
 import UserHome from '../components/user_home.jsx';
 
-const composer = ({Collections, WenziSubs, userId}, onData) => {
-  if (WenziSubs.subscribe('user', userId).ready()) {
-    let user = Collections.Users.findOne(userId);
-    onData(null, {user});
+const composer = ({Meteor, WenziSubs, userId}, onData) => {
+  if (WenziSubs.subscribe('users.single', userId).ready()) {
+    let user = Meteor.users.findOne(userId);
+    let notFound = false;
+
+    if (!user) {
+      notFound = true;
+      return onData(null, {notFound});
+    }
+
+    onData(null, {notFound, user});
 
     // SEO
     DocHead.setTitle(user.username);
@@ -17,9 +24,9 @@ const composer = ({Collections, WenziSubs, userId}, onData) => {
 };
 
 const depsMapper = (context, actions) => ({
+  Meteor: context.Meteor,
   FlowRouter: context.FlowRouter,
-  WenziSubs: context.WenziSubs,
-  Collections: context.Collections
+  WenziSubs: context.WenziSubs
 });
 
 export default composeAll(

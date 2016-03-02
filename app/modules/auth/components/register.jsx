@@ -16,7 +16,7 @@ const Register = React.createClass({
                 <div className='content'>注册文字工匠</div>
               </h2>
 
-              <form className={classNames('ui', 'large', 'form', {error: Boolean(error)})} onSubmit={this.handleSubmit}>
+              <form className={classNames('ui', 'large', 'form', {error: Boolean(error)})}>
                 <div className='ui segment'>
                   <div className='field'>
                     <div className='ui left icon input'>
@@ -39,7 +39,7 @@ const Register = React.createClass({
                   </div>
                   {processing ?
                     <div className='ui fluid large loading button'>&nbsp;</div> :
-                    <div className='ui fluid large teal button'>注册</div>}
+                    <div className='ui fluid large teal button' onClick={this.handleSubmit}>注册</div>}
                 </div>
                 {error && <div className='ui error message'><p>{error}</p></div>}
               </form>
@@ -72,11 +72,7 @@ const Register = React.createClass({
     }
   },
 
-  handleSubmit(event) {
-    if (event && event.preventDefault) {
-      event.preventDefault();
-    }
-
+  handleSubmit() {
     const {register} = this.props;
     const {email, username, password} = this.refs;
 

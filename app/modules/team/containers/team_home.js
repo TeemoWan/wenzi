@@ -4,9 +4,16 @@ import Loading from '/app/modules/core/components/loading.jsx';
 import TeamHome from '../components/team_home.jsx';
 
 const composer = ({Collections, WenziSubs, teamId}, onData) => {
-  if (WenziSubs.subscribe('team', teamId).ready()) {
+  if (WenziSubs.subscribe('teams.single', teamId).ready()) {
     const team = Collections.Teams.findOne(teamId);
-    onData(null, {team});
+    let notFound = false;
+
+    if (!team) {
+      notFound = true;
+      return onData(null, {notFound});
+    }
+
+    onData(null, {notFound, team});
 
     // SEO
     DocHead.setTitle(team.name);
