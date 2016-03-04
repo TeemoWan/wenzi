@@ -2,7 +2,6 @@ import {useDeps, composeWithTracker, composeAll} from 'mantra-core';
 import DocumentEdit from '../components/document_edit.jsx';
 
 const composer = ({Meteor, Collections, WenziSubs, documentId}, onData) => {
-
   if (WenziSubs.subscribe('documents.single', documentId).ready()) {
     let document = Collections.Documents.findOne(documentId);
     let {ownerType, ownerId} = document.owner;

@@ -7,6 +7,11 @@ export default function () {
   Meteor.publish('documents.single', _id => {
     check(_id, String);
     let document = Documents.findOne({_id: _id});
+
+    if (!document) {
+      return [];
+    }
+
     let {ownerType, ownerId} = document.owner;
 
     if (ownerType === 'user') {

@@ -16,11 +16,11 @@ export default function () {
         throw new Meteor.Error('nameEmpty', '团队名必须填写');
       }
 
-      if (!team.validate(name)) {
+      if (!team.validate('name')) {
         throw new Meteor.Error('nameTooLong', '团队名过长,不要超过30字符');
       }
 
-      if (!team.validate(summary)) {
+      if (!team.validate('summary')) {
         throw new Meteor.Error('summaryTooLong', '团队简介过长,不要超过1000字符');
       }
 

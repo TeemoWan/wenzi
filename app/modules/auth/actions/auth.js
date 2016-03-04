@@ -10,11 +10,15 @@ export default {
     LocalState.set('LOGIN_PROCESSING', true);
 
     Meteor.loginWithPassword(email, password, (err) => {
+      LocalState.set('LOGIN_PROCESSING', false);
+
       if (err) {
-        LocalState.set('LOGIN_PROCESSING', false);
-        LocalState.set('LOGIN_ERROR', err.reason);
+        if (err.reason === 'User not found' || err.reason === 'Incorrect password') {
+          LocalState.set('LOGIN_ERROR', '用户名或密码错误');
+        } else {
+          LocalState.set('LOGIN_ERROR', err.reason);
+        }
       } else {
-        LocalState.set('LOGIN_PROCESSING', false);
         FlowRouter.go('/');
       }
     });
@@ -59,17 +63,16 @@ export default {
     LocalState.set('REGISTER_ERROR', null);
     LocalState.set('REGISTER_PROCESSING', true);
 
-    Meteor.call('register', email, username, password, (err) => {
+    Meteor.call('auth.register', email, username, password, (err) => {
+      LocalState.set('REGISTER_PROCESSING', false);
+
       if (err) {
-        LocalState.set('REGISTER_PROCESSING', false);
         LocalState.set('REGISTER_ERROR', err.reason);
       } else {
         Meteor.loginWithPassword(email, password, (err) => {
           if (err) {
-            LocalState.set('REGISTER_PROCESSING', false);
             LocalState.set('REGISTER_ERROR', err.reason);
           } else {
-            LocalState.set('REGISTER_PROCESSING', false);
             FlowRouter.go('/');
           }
         });
@@ -86,8 +89,6 @@ export default {
     if (email === '') {
       return LocalState.set('FORGOTPASSWORD_ERROR', '邮箱地址必须填写');
     }
-
-
   },
 
   clearForgotPassword({LocalState}) {

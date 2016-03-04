@@ -18,11 +18,11 @@ export default function () {
         throw new Meteor.Error('nameEmpty', '文档名必须填写');
       }
 
-      if (!document.validate(name)) {
+      if (!document.validate('name')) {
         throw new Meteor.Error('nameTooLong', '文档名过长,不要超过120字符');
       }
 
-      if (!document.validate(summary)) {
+      if (!document.validate('summary')) {
         throw new Meteor.Error('summaryTooLong', '文档简介过长,不要超过1000字符');
       }
 

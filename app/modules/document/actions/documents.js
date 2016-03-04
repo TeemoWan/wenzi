@@ -23,11 +23,11 @@ export default {
       return LocalState.set('DOCUMENT_ADD_ERROR', '文档名必须填写');
     }
 
-    if (!document.validate(name)) {
+    if (!document.validate('name')) {
       return LocalState.set('DOCUMENT_ADD_ERROR', '文档名过长,不要超过120字符');
     }
 
-    if (!document.validate(summary)) {
+    if (!document.validate('summary')) {
       return LocalState.set('DOCUMENT_ADD_ERROR', '文档简介过长,不要超过1000字符');
     }
 

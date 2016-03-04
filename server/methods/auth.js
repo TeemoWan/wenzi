@@ -5,16 +5,13 @@ import {UserAuth} from '/lib/user';
 
 export default function () {
   Meteor.methods({
-    register(email, username, password) {
+    'auth.register'(email, username, password) {
       check(email, String);
       check(username, String);
       check(password, String);
 
       let user = new UserAuth();
-
-      user.set('email', email);
-      user.set('username', username);
-      user.set('password', password);
+      user.set({email, username, password});
 
       if (!email) {
         throw new Meteor.Error('emailEmpty', '邮箱地址必须填写');

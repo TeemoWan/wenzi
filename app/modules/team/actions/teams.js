@@ -9,11 +9,11 @@ export default {
       return LocalState.set('TEAM_ADD_ERROR', '团队名必须填写');
     }
 
-    if (!team.validate(name)) {
+    if (!team.validate('name')) {
       return LocalState.set('TEAM_ADD_ERROR', '团队名过长,不要超过30字符');
     }
 
-    if (!team.validate(summary)) {
+    if (!team.validate('summary')) {
       return LocalState.set('TEAM_ADD_ERROR', '团队简介过长,不要超过1000字符');
     }
 

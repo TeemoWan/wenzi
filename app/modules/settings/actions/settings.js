@@ -1,24 +1,31 @@
 export default {
-  settingsDomain({Meteor, LocalState}, domain) {
-    if (domain === '') {
-      return LocalState.set('SETTINGS_DOMAIN_ERROR', '个性域名必须填写');
+  saveDomain({Meteor, LocalState}, domain) {
+    if (!domain) {
+      return LocalState.set('SAVE_DOMAIN_ERROR', '个性域名必须填写');
     }
 
-    LocalState.set('SETTINGS_DOMAIN_ERROR', null);
-    LocalState.set('SETTINGS_DOMAIN_PROCESSING', true);
+    let user = Meteor.user();
+    user.set({domain});
 
-    Meteor.call('teamAdd', name, summary, (err, res) => {
+    if (!user.validate('domain')) {
+      return LocalState.set('SAVE_DOMAIN_ERROR', '个性域名为4到20位英文字符、数字、下划线或减号');
+    }
+
+    LocalState.set('SAVE_DOMAIN_PROCESSING', true);
+
+    Meteor.call('settings.domain', domain, (err) => {
+      LocalState.set('SAVE_DOMAIN_PROCESSING', false);
+
       if (err) {
-        LocalState.set('SETTINGS_DOMAIN_PROCESSING', false);
-        LocalState.set('SETTINGS_DOMAIN_ERROR', err.reason);
+        LocalState.set('SAVE_DOMAIN_ERROR', err.reason);
       } else {
-        LocalState.set('SETTINGS_DOMAIN_PROCESSING', false);
+        LocalState.set('SAVE_DOMAIN_ERROR', null);
       }
     });
   },
 
-  clearTeamAdd({LocalState}) {
-    LocalState.set('SETTINGS_DOMAIN_ERROR', null);
-    LocalState.set('SETTINGS_DOMAIN_PROCESSING', false);
+  clearDomain({LocalState}) {
+    LocalState.set('SAVE_DOMAIN_ERROR', null);
+    LocalState.set('SAVE_DOMAIN_PROCESSING', false);
   }
 };
