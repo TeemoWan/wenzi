@@ -19,6 +19,15 @@ export default function () {
 
   Meteor.publish('users.single', _id => {
     check(_id, String);
-    return Meteor.users.find({_id});
+    return Meteor.users.find({_id}, {
+      fields: {
+        username: 1,
+        emails: 1,
+        createdAt: 1,
+        profile: 1,
+        domain: 1,
+        statistics: 1
+      }
+    });
   });
 }

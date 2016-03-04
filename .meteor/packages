@@ -15,19 +15,15 @@ tracker                 # Meteor's client-side reactive programming library
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 
 ecmascript
+stylus
+email
 accounts-password
 flemay:less-autoprefixer
-stylus
 semantic:ui
 standard-minifier-css
 standard-minifier-js
+kadira:flow-router-ssr
 kadira:dochead
 meteorhacks:subs-manager
-kadira:flow-router-ssr
-jagi:astronomy
-jagi:astronomy-validators
-jagi:astronomy-relations
-jagi:astronomy-slug-behavior
-jagi:astronomy-timestamp-behavior
-email
 alanning:roles
+aldeed:collection2

@@ -16,6 +16,10 @@ const TeamAdd = React.createClass({
               <label>团队名</label>
               <input type='text' ref='name' placeholder='团队名' />
             </div>
+            <div className='inline field'>
+              <label>https://wenzi.com/user/</label>
+              <input type='text' ref='domain' placeholder='团队域名'/>
+            </div>
             <div className='field'>
               <label>团队简介</label>
               <textarea type='text' ref='summary' placeholder='团队简介...' rows='3' />
@@ -32,9 +36,9 @@ const TeamAdd = React.createClass({
 
   handleSubmit() {
     const {teamAdd} = this.props;
-    const {name, summary} = this.refs;
+    const {name, domain, summary} = this.refs;
 
-    teamAdd(name.value.trim(), summary.value);
+    teamAdd(name.value.trim(), domain.value, summary.value);
   }
 });
 

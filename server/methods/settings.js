@@ -1,29 +1,26 @@
 import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
-import User from '/lib/user';
 
 export default function () {
   Meteor.methods({
     'settings.domain'(domain) {
-      check(domain, String);
+      const domainRegExp = new RegExp(/^[a-z0-9_-]{3,16}$/);
 
-      let user = Meteor.users.findOne({_id: this.userId});
-      user.set({domain});
+      check(domain, String);
 
       if (!domain) {
         throw new Meteor.Error('domainEmpty', '个性域名必须填写');
       }
 
-      if (!user.validate('domain')) {
-        throw new Meteor.Error('domainRegexError', '个性域名为4到20位英文字符、数字、下划线或减号');
+      if (!domainRegExp.test(domain)) {
+        throw new Meteor.Error('domainNotValid', '个性域名为3到16位英文字符、数字、下划线或减号');
       }
 
       if (Meteor.users.findOne({domain})) {
         throw new Meteor.Error('domainExist', '此个性域名已经被占用');
       }
 
-      user.save();
-      return user;
+      return Meteor.users.upsert({_id: this.userId}, {domain});
     }
   });
 }

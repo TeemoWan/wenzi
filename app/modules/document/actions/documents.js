@@ -1,7 +1,6 @@
 import {Random} from 'meteor/random';
 import update from 'react/lib/update';
 import _ from 'lodash';
-import Document from '/lib/document';
 
 const generateEditTreeRouter = (tree, path='') => {
   let routes = {};
@@ -16,18 +15,15 @@ const generateEditTreeRouter = (tree, path='') => {
 
 export default {
   documentAdd({Meteor, LocalState, FlowRouter}, ownerType, ownerId, name, summary) {
-    let document = new Document();
-    document.set({name, summary, owner: {ownerType, ownerId}});
-
     if (!name) {
       return LocalState.set('DOCUMENT_ADD_ERROR', '文档名必须填写');
     }
 
-    if (!document.validate('name')) {
-      return LocalState.set('DOCUMENT_ADD_ERROR', '文档名过长,不要超过120字符');
+    if (name.length > 120) {
+      throw new Meteor.Error('nameTooLong', '文档名过长,不要超过120字符');
     }
 
-    if (!document.validate('summary')) {
+    if (name.summary > 1000) {
       return LocalState.set('DOCUMENT_ADD_ERROR', '文档简介过长,不要超过1000字符');
     }
 
@@ -41,7 +37,7 @@ export default {
         return LocalState.set('DOCUMENT_ADD_ERROR', err.reason);
       }
 
-      FlowRouter.go(`/document/${res._id}`);
+      FlowRouter.go(`/document/${res}`);
     });
   },
 

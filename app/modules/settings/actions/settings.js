@@ -1,14 +1,13 @@
 export default {
   saveDomain({Meteor, LocalState}, domain) {
+    const domainRegExp = new RegExp(/^[a-z0-9_-]{3,16}$/);
+
     if (!domain) {
       return LocalState.set('SAVE_DOMAIN_ERROR', '个性域名必须填写');
     }
 
-    let user = Meteor.user();
-    user.set({domain});
-
-    if (!user.validate('domain')) {
-      return LocalState.set('SAVE_DOMAIN_ERROR', '个性域名为4到20位英文字符、数字、下划线或减号');
+    if (!domainRegExp.test(domain)) {
+      return LocalState.set('SAVE_DOMAIN_ERROR', '个性域名为3到20位英文字符、数字、下划线或减号');
     }
 
     LocalState.set('SAVE_DOMAIN_PROCESSING', true);
