@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 const SettingsDomain = React.createClass({
   render() {
-    const {error, processing, domain} = this.props;
+    const {error, processing, success, domain} = this.props;
 
     return (
       <div id='settings-domain'>
@@ -14,16 +14,19 @@ const SettingsDomain = React.createClass({
         </div>
         
         <div className='ui segment' id='settings-domain-content'>
-          <form className={classNames('ui', 'form', {error: Boolean(error)})} onSubmit={this.handleSubmit}>
+          <form className={classNames('ui', 'form', {error: Boolean(error)}, {success: success})} onSubmit={this.handleSubmit}>
             <h2 className='ui dividing header'>个性域名</h2>
             {error && <div className='ui error message'><p>{error}</p></div>}
-            <div className='inline field'>
-              <label>https://wenzi.com/user/</label>
-              <input type='text' ref='domain' placeholder='个性域名' value={domain}/>
+            {success && <div className='ui success message'><p>个性域名修改成功</p></div>}
+            <div className='field'>
+              <div className='ui labeled input'>
+                <div className='ui label'>https://wenzi.com/user/</div>
+                <input type='text' ref='domain' placeholder='个性域名' defaultValue={domain}/>
+              </div>
             </div>
             {processing ?
-            <div className='ui teal loading disabled button'>&nbsp;</div> :
-            <div className='ui teal button'>保存</div>}
+            <button className='ui teal loading disabled button'>&nbsp;</button> :
+            <button className='ui teal button' type='submit'>保存</button>}
           </form>
         </div>
       </div>

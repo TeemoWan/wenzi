@@ -29,16 +29,14 @@ const DocumentAdd = React.createClass({
 
     items.push(
       <div className='item' data-value={`user:${user._id}`} key={user._id}>
-        <i className='user icon'/>
-        {user.username}
+        <i className='user icon'/>{user.username}
       </div>
     );
 
     teams.forEach((team) => {
       items.push(
         <div className='item' data-value={`team:${team._id}`} key={team._id}>
-          <i className='users icon'/>
-          {team.name}
+          <i className='users icon'/>{team.name}
         </div>
       );
     });
@@ -57,9 +55,7 @@ const DocumentAdd = React.createClass({
                   <input type='hidden' name='owner' ref='owner' />
                   <i className='dropdown icon'/>
                   <div className='default text'>所有者</div>
-                  <div className='menu'>
-                    {items}
-                  </div>
+                  <div className='menu'>{items}</div>
                 </div>
               </div>
               <div className='eleven wide field'>
@@ -67,6 +63,7 @@ const DocumentAdd = React.createClass({
                 <input type='text' ref='name' placeholder='文档名' />
               </div>
             </div>
+
             <div className='field'>
               <label>文档简介</label>
               <textarea ref='summary' placeholder='文档简介...' />

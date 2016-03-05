@@ -20,7 +20,7 @@ export default function () {
         throw new Meteor.Error('domainExist', '此个性域名已经被占用');
       }
 
-      return Meteor.users.upsert({_id: this.userId}, {domain});
+      return Meteor.users.update({_id: this.userId}, {$set: {domain: domain}});
     }
   });
 }

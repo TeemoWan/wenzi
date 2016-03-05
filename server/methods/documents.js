@@ -26,7 +26,6 @@ export default function () {
       return Documents.insert({
         name,
         summary,
-        createdBy: this.userId,
         owner: {
           ownerType,
           ownerId

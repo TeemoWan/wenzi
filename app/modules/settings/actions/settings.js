@@ -11,6 +11,7 @@ export default {
     }
 
     LocalState.set('SAVE_DOMAIN_PROCESSING', true);
+    LocalState.set('SAVE_DOMAIN_SUCCESS', false);
 
     Meteor.call('settings.domain', domain, (err) => {
       LocalState.set('SAVE_DOMAIN_PROCESSING', false);
@@ -18,6 +19,7 @@ export default {
       if (err) {
         LocalState.set('SAVE_DOMAIN_ERROR', err.reason);
       } else {
+        LocalState.set('SAVE_DOMAIN_SUCCESS', true);
         LocalState.set('SAVE_DOMAIN_ERROR', null);
       }
     });
@@ -26,5 +28,6 @@ export default {
   clearDomain({LocalState}) {
     LocalState.set('SAVE_DOMAIN_ERROR', null);
     LocalState.set('SAVE_DOMAIN_PROCESSING', false);
+    LocalState.set('SAVE_DOMAIN_SUCCESS', false);
   }
 };

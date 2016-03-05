@@ -5,16 +5,15 @@ import SettingsDomain from '../components/settings_domain.jsx';
 const composer = ({Meteor, LocalState, WenziSubs, clearDomain}, onData) => {
   const error = LocalState.get('SAVE_DOMAIN_ERROR');
   const processing = LocalState.get('SAVE_DOMAIN_PROCESSING');
+  const success = LocalState.get('SAVE_DOMAIN_SUCCESS');
   let domain = '';
 
   if (WenziSubs.subscribe('users.current').ready()) {
     let user = Meteor.users.findOne({_id: Meteor.userId()});
-    console.dir(user);
     domain = user.domain;
   }
 
-  onData(null, {error, processing, domain});
-
+  onData(null, {error, processing, success, domain});
   return clearDomain;
 };
 
