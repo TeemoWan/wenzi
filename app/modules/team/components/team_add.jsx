@@ -9,12 +9,12 @@ const TeamAdd = React.createClass({
       <div className='ui grid' id='team-add'>
         <div className='two wide column'></div>
         <div className='twelve wide column'>
-          <form className={classNames('ui', 'form', {error: Boolean(error)})}>
+          <form className={classNames('ui', 'form', {error: Boolean(error)})} onSubmit={this.handleSubmit}>
             <h2 className='ui dividing header'>创建团队</h2>
             {error && <div className='ui error message'><p>{error}</p></div>}
             <div className='field'>
               <label>团队名</label>
-              <input type='text' ref='name' placeholder='团队名' />
+              <input type='text' ref='name' placeholder='团队名'/>
             </div>
             <div className='field'>
               <label>团队域名</label>
@@ -25,11 +25,11 @@ const TeamAdd = React.createClass({
             </div>
             <div className='field'>
               <label>团队简介</label>
-              <textarea type='text' ref='summary' placeholder='团队简介...' rows='3' />
+              <textarea type='text' ref='summary' placeholder='团队简介...' rows='3'/>
             </div>
             {processing ?
-              <div className='ui teal loading disabled button'>&nbsp;</div> :
-              <div className='ui teal button' onClick={this.handleSubmit}>创建团队</div>}
+            <button className='ui teal loading disabled button'>&nbsp;</button> :
+            <button className='ui teal button' type='submit'>创建团队</button>}
           </form>
         </div>
         <div className='two wide column'></div>
@@ -37,7 +37,11 @@ const TeamAdd = React.createClass({
     );
   },
 
-  handleSubmit() {
+  handleSubmit(event) {
+    if (event && event.preventDefault) {
+      event.preventDefault();
+    }
+
     const {teamAdd} = this.props;
     const {name, domain, summary} = this.refs;
 

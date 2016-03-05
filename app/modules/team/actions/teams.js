@@ -12,7 +12,7 @@ export default {
     }
 
     if (!domain) {
-      return LocalState.set('TEAM_ADD_ERROR', '团队名必须填写');
+      return LocalState.set('TEAM_ADD_ERROR', '团队域名必须填写');
     }
 
     if (!domainRegExp.test(domain)) {

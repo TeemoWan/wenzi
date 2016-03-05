@@ -13,7 +13,7 @@ const ForgotPassword = React.createClass({
               <img src='/images/logo.png' className='image'/>
               <div className='content'>找回密码</div>
             </h2>
-            <form className='ui large form'>
+            <form className='ui large form' onSubmit={this.handleSubmit}>
               <div className='ui segment'>
                 <div className='field'>
                   <div className='ui left icon input'>
@@ -21,7 +21,7 @@ const ForgotPassword = React.createClass({
                     <input type='text' name='email' placeholder='邮箱' onKeyDown={this.handleEmailEnterKeyDown}/>
                   </div>
                 </div>
-                <div className='ui fluid large teal submit button' onClick={this.handleSubmit}>找回密码</div>
+                <button className='ui fluid large teal submit button' type='submit'>找回密码</button>
               </div>
               {error && <div className='ui error message'><p>{error}</p></div>}
             </form>
@@ -41,7 +41,11 @@ const ForgotPassword = React.createClass({
     }
   },
 
-  handleSubmit() {
+  handleSubmit(event) {
+    if (event && event.preventDefault) {
+      event.preventDefault();
+    }
+
     const {forgotPassword} = this.props;
     const {email} = this.refs;
 
